@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>QivoDigital — Tecnología que transforma negocios</title>
-  <link rel="stylesheet" href="/assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
   <!-- ✅ FIX EMOJIS GLOBAL -->
 <style>
   :root{
@@ -98,7 +98,7 @@
   <!-- HEADER COMPARTIDO -->
   <div id="header-placeholder"></div>
   <script>
-    fetch("/components/header.html")
+    fetch("components/header.html")
       .then(r => r.text())
       .then(h => {
         document.getElementById("header-placeholder").innerHTML = h;
@@ -135,11 +135,11 @@
 
   <!-- FORM 1 (primer fold) -->
   <section class="container" id="form-hero" style="margin-top:24px">
-    <form class="qv-form" data-form="hero" method="post" action="/api/leads.php">
+    <form class="qv-form" data-form="hero" method="post" action="api/leads.php">
       <h3>🧭 Inicia tu proyecto digital</h3>
       <span class="hint">Cuéntanos lo esencial y te contactamos en &lt; 24h.</span>
       <input type="hidden" name="brand" value="qivodigital"/>
-      <input type="hidden" name="source_page" value="/#form-hero"/>
+      <input type="hidden" name="source_page" value="#form-hero"/>
       <div class="qv-grid">
         <label>Nombre completo*<br><input required name="nombre" placeholder="Tu nombre"/></label>
         <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
@@ -300,11 +300,11 @@
 
   <!-- FORM 2 (al final de servicios) -->
   <section class="container" id="form-servicios" style="margin-top:24px">
-    <form class="qv-form" data-form="servicios" method="post" action="/api/leads.php">
+    <form class="qv-form" data-form="servicios" method="post" action="api/leads.php">
       <h3>📝 Solicitar propuesta técnica</h3>
       <span class="hint">Responde en breve y preparamos el alcance.</span>
       <input type="hidden" name="brand" value="qivodigital"/>
-      <input type="hidden" name="source_page" value="/#form-servicios"/>
+      <input type="hidden" name="source_page" value="#form-servicios"/>
       <div class="qv-grid">
         <label>Nombre completo*<br><input required name="nombre" placeholder="Tu nombre"/></label>
         <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
@@ -394,18 +394,18 @@
   <!-- FOOTER COMPARTIDO -->
   <div id="footer-placeholder"></div>
   <script>
-    fetch("/components/footer.html")
+    fetch("components/footer.html")
       .then(r=>r.text())
       .then(h=>document.getElementById("footer-placeholder").innerHTML=h);
   </script>
 
 <!-- ✅ Toasts system -->
-<script src="/assets/js/toasts-core.js"></script>
-<script src="/assets/js/toasts-init.js"></script>
+<script src="assets/js/toasts-core.js"></script>
+<script src="assets/js/toasts-init.js"></script>
 
   <!-- JS global -->
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/anim-enhance.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/anim-enhance.js"></script>
 
   <!-- Captura UTM + envío AJAX para .qv-form -->
   <script>
@@ -420,7 +420,7 @@
         if(p.get(k) && !fd.get(k)) fd.set(k, p.get(k));
       });
       try{
-        const r = await fetch(form.getAttribute('action') || '/api/leads.php', { method:'POST', body:fd });
+        const r = await fetch(form.getAttribute('action') || 'api/leads.php', { method:'POST', body:fd });
         const j = await r.json();
         alert(j.ok ? '✅ Recibimos tu solicitud.' : '❌ No pudimos registrar tu solicitud.');
         if(j.ok) form.reset();
