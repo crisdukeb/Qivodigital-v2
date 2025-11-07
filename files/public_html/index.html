@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QivoDigital — Tecnología que transforma negocios</title>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+  <style>
+    /* ===== Estilos finos y pro ===== */
+    :root{
+      --gap:18px; --gap-lg:28px;
+      --gold1:#f8d17a; --gold2:#b8892a;
+      --grad-gold: linear-gradient(135deg,var(--gold1),var(--gold2));
+      --grad-title: linear-gradient(135deg,#9ad0ff,#6ea7ff 30%,#b38b3c 70%,#f0d685);
+    }
+    *{box-sizing:border-box}
+    body{margin:0}
+    h1,h2,h3{ line-height:1.15; margin:0 0 8px }
+    h1, h2 { background:var(--grad-title); -webkit-background-clip:text; background-clip:text; color:transparent }
+    .subtle{ opacity:.9 }
+    .container{ width:min(1120px,92vw); margin:0 auto }
+    section.container{ margin-top:40px !important }  /* módulos más cerca */
+    .hero.container{ margin-top:0 !important }
+    .grid{ display:grid; grid-template-columns: 1.2fr .8fr; gap:var(--gap-lg) }
+    @media (max-width:900px){ .grid{ grid-template-columns:1fr } }
+
+    /* Formularios */
+    .qv-form{ padding:18px 18px 20px; border-radius:22px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08) }
+    .qv-form h3{ margin:0 0 8px }
+    .qv-form .hint{ display:block; margin:6px 0 10px; opacity:.85; font-size:.92rem }
+    .qv-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px }
+    .qv-form label{ display:block; font-size:.98rem }
+    .qv-form input,.qv-form select,.qv-form textarea{
+      width:100%; padding:10px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:#0d0f12; color:#eee
+    }
+    .qv-form textarea{ resize:vertical }
+    @media (max-width:700px){ .qv-grid{ grid-template-columns:1fr } }
+
+    /* Tarjetas */
+    .qv-card{ padding:18px; border-radius:18px; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08) }
+    .qv-card + .qv-card{ margin-top:var(--gap) }
+
+    /* Servicios */
+    #servicios .grid-serv{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:var(--gap) }
+    #servicios .qv-card h3{ display:flex; gap:8px; align-items:center; margin:0 0 6px }
+    #servicios details{ margin-top:8px }
+    #servicios .kpoints{ margin:8px 0 0 0; padding-left:18px }
+    #servicios .kpoints li{ margin:4px 0 }
+
+    /* Botón PRO oro */
+    .btn-pro{
+      padding:12px 18px; border-radius:14px; border:1px solid rgba(255,255,255,.18);
+      background:var(--grad-gold); color:#111; font-weight:700; box-shadow:0 4px 18px rgba(248,209,122,.25);
+      text-decoration:none; display:inline-block
+    }
+    .btn-row{ margin-top:16px; display:flex; justify-content:center }
+
+    /* Testimonios carrusel */
+    .testi-row{ display:flex; gap:16px; overflow-x:auto; padding:6px 2px; scroll-snap-type:x mandatory }
+    .testi{ min-width:320px; max-width:360px; scroll-snap-align:start }
+    .testi header{ display:flex; align-items:center; gap:12px; margin-bottom:8px }
+    .avatar{ width:48px; height:48px; border-radius:999px; overflow:hidden; flex:0 0 48px; background:rgba(255,255,255,.08); display:grid; place-items:center; font-size:22px }
+    .avatar img{ width:100%; height:100%; object-fit:cover; display:block }
+
+    /* Casos */
+    .cases{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px }
+    .case{ display:flex; gap:12px; align-items:flex-start }
+    .case .thumb{ width:48px; height:48px; border-radius:12px; display:grid; place-items:center; font-size:22px; background:rgba(255,255,255,.06) }
+
+    /* Hero badges */
+    .badges{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px }
+    .badge{ padding:6px 10px; border:1px solid rgba(255,255,255,.12); border-radius:999px; font-size:.88rem; opacity:.9 }
+    .actions{ display:flex; gap:10px; margin:14px 0 0 0 }
+    .btn{ padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.14); text-decoration:none; display:inline-block }
+    .btn-primary{ background:#2463eb; color:white }
+    .btn-ghost{ background:transparent; color:#eaeaea }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER COMPARTIDO -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("components/header.html")
+      .then(r=>r.text())
+      .then(h=>document.getElementById("header-placeholder").innerHTML=h);
+  </script>
+
+  <!-- HERO -->
+  <section class="hero container" id="hero">
+    <div class="grid">
+      <div>
+        <p class="kicker"><span class="dot"></span>Transformación Digital</p>
+        <h1>Tu empresa preparada para el futuro.</h1>
+        <p class="lead subtle">
+          Software a medida · Automatización inteligente · IA que impulsa resultados operativos.<br/>
+          En QivoDigital diseñamos y construimos la tecnología que tus competidores aún no ven venir.
+        </p>
+        <div class="actions">
+          <a href="#form-hero" class="btn btn-primary">Agenda tu consultoría estratégica</a>
+          <a href="#form-hero" class="btn btn-ghost">Solicita análisis técnico</a>
+        </div>
+        <div class="badges">
+          <span class="badge">Sistemas internos</span>
+          <span class="badge">Plataformas web</span>
+          <span class="badge">Automatización con IA</span>
+          <span class="badge">Apps móviles</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p>Vista previa — ecosistema QivoDigital</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM 1 (primer fold) -->
+  <section class="container" id="form-hero" style="margin-top:24px">
+    <form class="qv-form" data-form="hero" method="post" action="/lead.php">
+      <h3>🧭 Inicia tu proyecto digital</h3>
+      <span class="hint">Cuéntanos lo esencial y te contactamos en &lt; 24h.</span>
+      <input type="hidden" name="brand" value="qivodigital"/>
+      <input type="hidden" name="source_page" value="index#form-hero"/>
+      <div class="qv-grid">
+        <label>Nombre completo*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+        <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+        <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+        <label>¿Qué necesitas ahora mismo?*<br>
+          <select name="interes" required>
+            <option value="">Selecciona…</option>
+            <option value="automatizacion">⚙️ Automatización de procesos</option>
+            <option value="integraciones">🔗 Integraciones / APIs</option>
+            <option value="whatsapp">📲 WhatsApp Marketing / API</option>
+            <option value="crm">📈 CRM a medida</option>
+            <option value="ecommerce">🛒 Ecommerce</option>
+            <option value="web-apps">🌐 Web / Web-Apps (SEO-first)</option>
+            <option value="apps">📱 Apps móviles</option>
+            <option value="software-medida">🏗️ Software a medida</option>
+            <option value="chatbots">🤖 Chatbots e IA</option>
+            <option value="otros">➕ Otros</option>
+          </select>
+        </label>
+      </div>
+      <label>Objetivo en 30–60 días* <span class="hint">3–5 líneas, concreto.</span><br>
+        <textarea required name="mensaje" rows="4" placeholder="Ej.: Integrar inventario con ecommerce y confirmar pedidos por WhatsApp; reportes diarios a gerencia."></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- 01 — Servicios -->
+  <section class="container" id="servicios" style="margin-top:40px">
+    <h2>Servicios digitales para empresas — Nueva Era</h2>
+    <p class="subtle">Portafolio alineado a resultados. Abre cada item para ver contexto y entregables.</p>
+
+    <div class="grid-serv">
+      <article class="qv-card">
+        <h3>⚙️ Automatización de procesos</h3>
+        <p>Elimina tareas manuales y reduce tiempos de operación.</p>
+        <details><summary>Cómo lo hacemos</summary>
+          <ul class="kpoints">
+            <li>Diseño de flujos (BPMN) y orquestación con colas.</li>
+            <li>Facturación / conciliaciones / reportes automáticos.</li>
+            <li>Alertas y auditoría con logs centralizados.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="qv-card">
+        <h3>🔗 Integraciones / APIs</h3>
+        <p>Conecta tu stack y mueve datos sin fricción.</p>
+        <details><summary>Compatibilidades</summary>
+          <ul class="kpoints">
+            <li>ERP/CRM, pasarelas de pago, logística, BI.</li>
+            <li>Diseño de APIs REST, versionado y pruebas contract.</li>
+            <li>Monitoreo, rate limits y reintentos seguros.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="qv-card">
+        <h3>📲 WhatsApp Marketing / API</h3>
+        <p>Campañas, chatbots y métricas accionables.</p>
+        <details><summary>Detalle</summary>
+          <ul class="kpoints">
+            <li>Segmentación, plantillas, AB testing.</li>
+            <li>Integración con CRM/web y disparadores por evento.</li>
+            <li>Cumplimiento y privacidad end-to-end.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="qv-card">
+        <h3>📈 CRM a medida</h3>
+        <p>Pipeline y relación con clientes a tu medida.</p>
+        <details><summary>Detalle</summary>
+          <ul class="kpoints">
+            <li>Roles/permisos, vistas por equipo.</li>
+            <li>Automatizaciones comerciales y scoring.</li>
+            <li>Reportes de conversión y tablero ejecutivo.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="qv-card">
+        <h3>🛒 Ecommerce</h3>
+        <p>Tiendas de alto rendimiento con pagos y logística.</p>
+        <details><summary>Detalle</summary>
+          <ul class="kpoints">
+            <li>Inventario por ciudad, promociones y bundles.</li>
+            <li>Pasarela, despacho, tracking y postventa.</li>
+            <li>Integración con marketplaces y feeds.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="qv-card">
+        <h3>🌐 Web / Web-Apps (SEO-first)</h3>
+        <p>Webs rápidas, seguras y listas para crecer.</p>
+        <details><summary>Detalle</summary>
+          <ul class="kpoints">
+            <li>Core Web Vitals y performance budgets.</li>
+            <li>Arquitectura de contenidos, PWA/SSR.</li>
+            <li>Accesibilidad y analytics listos.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="qv-card">
+        <h3>📱 Apps móviles</h3>
+        <p>Nativas o híbridas, conectadas a tu backend.</p>
+        <details><summary>Detalle</summary>
+          <ul class="kpoints">
+            <li>Autenticación, push, offline-first.</li>
+            <li>Cámara, geo, pagos; publicación en stores.</li>
+            <li>Observabilidad de crashes y métricas.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="qv-card">
+        <h3>🏗️ Software a medida</h3>
+        <p>Sistemas exactos a tu operación.</p>
+        <details><summary>Detalle</summary>
+          <ul class="kpoints">
+            <li>Node.js / PHP (Laravel), SQL/NoSQL.</li>
+            <li>Escalabilidad horizontal y caching.</li>
+            <li>Seguridad: JWT/2FA/CSP.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="qv-card">
+        <h3>🤖 Chatbots e IA</h3>
+        <p>Atención inteligente 24/7.</p>
+        <details><summary>Detalle</summary>
+          <ul class="kpoints">
+            <li>Asistentes generativos para soporte/ventas.</li>
+            <li>Clasificación y resumen de conversaciones.</li>
+            <li>Entrenamiento con datos propios.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="qv-card">
+        <h3>➕ Otros</h3>
+        <p>Cuéntanos tu reto y lo diseñamos.</p>
+        <details><summary>Ejemplos</summary>
+          <ul class="kpoints">
+            <li>Dashboards ejecutivos y data pipelines.</li>
+            <li>Scraping controlado y herramientas internas.</li>
+          </ul>
+        </details>
+      </article>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn-pro" href="https://literate-potato-97ggp7pv6pq9hvx-3000.app.github.dev/servicios/" target="_blank" rel="noopener">Ver todos los servicios</a>
+    </div>
+  </section>
+
+  <!-- FORM 2 (al final de servicios) -->
+  <section class="container" id="form-servicios" style="margin-top:24px">
+    <form class="qv-form" data-form="servicios" method="post" action="/lead.php">
+      <h3>📝 Solicitar propuesta técnica</h3>
+      <span class="hint">Responde en breve y preparamos el alcance.</span>
+      <input type="hidden" name="brand" value="qivodigital"/>
+      <input type="hidden" name="source_page" value="index#form-servicios"/>
+      <div class="qv-grid">
+        <label>Nombre completo*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+        <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+        <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+        <label>¿Qué necesitas ahora mismo?*<br>
+          <select name="interes" required>
+            <option value="">Selecciona…</option>
+            <option value="automatizacion">⚙️ Automatización de procesos</option>
+            <option value="integraciones">🔗 Integraciones / APIs</option>
+            <option value="whatsapp">📲 WhatsApp Marketing / API</option>
+            <option value="crm">📈 CRM a medida</option>
+            <option value="ecommerce">🛒 Ecommerce</option>
+            <option value="web-apps">🌐 Web / Web-Apps (SEO-first)</option>
+            <option value="apps">📱 Apps móviles</option>
+            <option value="software-medida">🏗️ Software a medida</option>
+            <option value="chatbots">🤖 Chatbots e IA</option>
+            <option value="otros">➕ Otros</option>
+          </select>
+        </label>
+      </div>
+      <label>Objetivo en 30–60 días* <span class="hint">3–5 líneas.</span><br>
+        <textarea required name="mensaje" rows="4" placeholder="¿Qué debe estar funcionando para considerar esto un éxito?"></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+    </form>
+  </section>
+
+  <!-- 03 — QivoSend (sección informativa) -->
+  <section class="container" id="qivosend" style="margin-top:40px">
+    <h2>Nuestra herramienta diferenciadora: QivoSend</h2>
+    <ul class="qv-list">
+      <li>📊 Envíos masivos de WhatsApp con métricas avanzadas</li>
+      <li>🤖 Chatbots con IA integrados en servicio al cliente</li>
+      <li>📈 CRM completo para seguimiento, pipelines y suscripción</li>
+      <li>🧾 Facturación automática integrada con tus sistemas</li>
+      <li>🔌 Integración total con tu web, tu app y tus procesos internos</li>
+    </ul>
+    <p><a class="btn btn-ghost" href="https://qivosend.com" target="_blank" rel="noopener">Descubre QivoSend</a></p>
+  </section>
+
+  <!-- 04 — Casos de éxito -->
+  <section class="container" id="casos" style="margin-top:40px">
+    <h2>Casos de Éxito</h2>
+    <div class="cases">
+      <article class="qv-card case"><div class="thumb">📈</div><div><h3>QivoSend</h3><p class="subtle">SaaS en 300+ empresas. Leads y datos +450% en 90 días.</p></div></article>
+      <article class="qv-card case"><div class="thumb">🛍️</div><div><h3>Temptation Shop Panel</h3><p class="subtle">−1 min por pedido; eficiencia +40%.</p></div></article>
+      <article class="qv-card case"><div class="thumb">🚚</div><div><h3>Vehitron System</h3><p class="subtle">Stock y precios por ciudad; pérdidas −27%.</p></div></article>
+      <article class="qv-card case"><div class="thumb">🏦</div><div><h3>FirmaLogix</h3><p class="subtle">Migración 14 sistemas en 6 semanas sin detener ventas.</p></div></article>
+      <article class="qv-card case"><div class="thumb">🧠</div><div><h3>AnalyticsPredict</h3><p class="subtle">IA anticipa fallos; costos −25%.</p></div></article>
+      <article class="qv-card case"><div class="thumb">📲</div><div><h3>RetailPlus App & CRM</h3><p class="subtle">App + panel; 65% tareas repetitivas liberadas.</p></div></article>
+      <!-- +4 nuevos -->
+      <article class="qv-card case"><div class="thumb">🏥</div><div><h3>HealthFlow</h3><p class="subtle">Agenda médica + bots; no-shows −32%.</p></div></article>
+      <article class="qv-card case"><div class="thumb">🏭</div><div><h3>FactoryIQ</h3><p class="subtle">Monitoreo IoT y alertas; paros −18%.</p></div></article>
+      <article class="qv-card case"><div class="thumb">🎫</div><div><h3>TicketMasterOps</h3><p class="subtle">Integraciones y filas virtuales; picos x8 OK.</p></div></article>
+      <article class="qv-card case"><div class="thumb">💳</div><div><h3>FinPay Hub</h3><p class="subtle">Switch de pagos + conciliación; reclamos −22%.</p></div></article>
+    </div>
+  </section>
+<!-- 05 — Testimonios -->
+  <section class="container" id="testimonios" style="margin-top:40px">
+    <h2>Testimonios Premium</h2>
+    <div class="testi-row">
+      <!-- 6 existentes con fallback de imagen -->
+      <blockquote class="qv-card testi">
+        <header>
+          <div class="avatar"><img src="/assets/img/avatars/ana.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div>
+          <div class="meta"><b>Ana Gómez</b><br><small>CEO · RetailCorp</small></div>
+        </header>
+        <p>“Sistema interno sin supervisión. Visibilidad total.”</p>
+      </blockquote>
+
+      <blockquote class="qv-card testi">
+        <header>
+          <div class="avatar"><img src="/assets/img/avatars/carlos.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%2322%32%32/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div>
+          <div class="meta"><b>Carlos Martínez</b><br><small>COO · LogísticaPlus</small></div>
+        </header>
+        <p>“En 30 días sistema nuevo, equipos liberados, datos en vivo.”</p>
+      </blockquote>
+
+      <blockquote class="qv-card testi">
+        <header>
+          <div class="avatar"><img src="/assets/img/avatars/maria.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div>
+          <div class="meta"><b>María Pérez</b><br><small>Dir. Tecnología · FintechGlobal</small></div>
+        </header>
+        <p>“Queríamos socios tecnológicos; hoy somos referencia.”</p>
+      </blockquote>
+
+      <blockquote class="qv-card testi">
+        <header>
+          <div class="avatar"><img src="/assets/img/avatars/laura.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div>
+          <div class="meta"><b>Laura Fernández</b><br><small>Gerente CX · SoftServices</small></div>
+        </header>
+        <p>“Automatizamos 87% de chats sin contratar personal extra.”</p>
+      </blockquote>
+
+      <blockquote class="qv-card testi">
+        <header>
+          <div class="avatar"><img src="/assets/img/avatars/miguel.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div>
+          <div class="meta"><b>Miguel Álvarez</b><br><small>CEO · GlobalLogistics</small></div>
+        </header>
+        <p>“Dashboard con datos en vivo y alertas inteligentes.”</p>
+      </blockquote>
+
+      <blockquote class="qv-card testi">
+        <header>
+          <div class="avatar"><img src="/assets/img/avatars/javier.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div>
+          <div class="meta"><b>Javier Rodríguez</b><br><small>Director Operaciones · IndustriaMetal</small></div>
+        </header>
+        <p>“Escalamos sin interrupciones y con total seguridad.”</p>
+      </blockquote>
+
+      <!-- +8 nuevos -->
+      <blockquote class="qv-card testi"><header><div class="avatar"><img src="/assets/img/avatars/valeria.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div><div class="meta"><b>Valeria Núñez</b><br><small>CMO · RetailTech</small></div></header><p>“Campañas WhatsApp con métricas nos triplicaron los leads.”</p></blockquote>
+      <blockquote class="qv-card testi"><header><div class="avatar"><img src="/assets/img/avatars/andres.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div><div class="meta"><b>Andrés Ríos</b><br><small>CTO · AgroPlus</small></div></header><p>“Integraciones estables; datos consistentes entre plantas.”</p></blockquote>
+      <blockquote class="qv-card testi"><header><div class="avatar"><img src="/assets/img/avatars/sofia.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div><div class="meta"><b>Sofía Ramírez</b><br><small>COO · EduTech</small></div></header><p>“IA liberó 65% de tareas; enfoque en innovación.”</p></blockquote>
+      <blockquote class="qv-card testi"><header><div class="avatar"><img src="/assets/img/avatars/luis.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div><div class="meta"><b>Luis Ortega</b><br><small>CEO · TravelNet</small></div></header><p>“Migración cloud sin downtime y con ahorro de costos.”</p></blockquote>
+      <blockquote class="qv-card testi"><header><div class="avatar"><img src="/assets/img/avatars/dana.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div><div class="meta"><b>Dana Ruiz</b><br><small>Gerente · HealthCare</small></div></header><p>“Turnos y recordatorios automatizados redujeron no-shows.”</p></blockquote>
+      <blockquote class="qv-card testi"><header><div class="avatar"><img src="/assets/img/avatars/ricardo.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div><div class="meta"><b>Ricardo Molina</b><br><small>VP Ops · LogiCargo</small></div></header><p>“Tableros operativos en tiempo real cambiaron la gestión.”</p></blockquote>
+      <blockquote class="qv-card testi"><header><div class="avatar"><img src="/assets/img/avatars/elena.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div><div class="meta"><b>Elena Soto</b><br><small>CFO · FinanceCo</small></div></header><p>“Conciliación y reportes automáticos nos ahorran horas diarias.”</p></blockquote>
+      <blockquote class="qv-card testi"><header><div class="avatar"><img src="/assets/img/avatars/mauricio.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div><div class="meta"><b>Mauricio P.</b><br><small>CTO · MediaHub</small></div></header><p>“API pública con SLAs y monitoreo: soporte bajó 41%.”</p></blockquote>
+      <blockquote class="qv-card testi"><header><div class="avatar"><img src="/assets/img/avatars/paula.jpg" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><rect width=%2248%22 height=%2248%22 rx=%2224%22 fill=%23222/><text x=%2224%22 y=%2230%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%23bbb>👤</text></svg>';"></div><div class="meta"><b>Paula C.</b><br><small>Head of Growth · ShopNow</small></div></header><p>“SEO-first + campañas WA: +128% revenue trimestral.”</p></blockquote>
+    </div>
+  </section>
+
+  <!-- 06 — Eficiencia & Tecnología -->
+  <section class="container" id="eficiencia" style="margin-top:40px">
+    <h2>Eficiencia y Tecnología como Estándar</h2>
+    <ul class="qv-list">
+      <li>🕒 Sistemas activos 24/7, sin interrupciones</li>
+      <li>⚡ Integraciones completas implementadas en 5–7 semanas</li>
+      <li>🧬 Tecnología adaptada a tu crecimiento, no a plantillas pre-armadas</li>
+      <li>📡 Visibilidad total de procesos, datos y resultados</li>
+      <li>🚀 Equipos liberados de tareas repetitivas, enfocados en innovación</li>
+    </ul>
+  </section>
+
+  <!-- CTA final (sin WhatsApp) -->
+  <section class="container" id="cta-final" style="margin:36px auto">
+    <h2>Tu empresa merece tecnología que funcione como la necesitas</h2>
+    <p>Entregamos sistemas, webs, apps y automatizaciones a la medida para que tu operación sea ágil, escalable y precisa.</p>
+    <div class="actions"><a href="#contacto" class="btn btn-primary">Iniciar diagnóstico técnico</a></div>
+  </section>
+
+  <!-- FOOTER COMPARTIDO -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("components/footer.html")
+      .then(r=>r.text())
+      .then(h=>document.getElementById("footer-placeholder").innerHTML=h);
+  </script>
+
+  <script src="/assets/js/main.js"></script>
+  <div id="footer-app"><?php /* include "components/footer.html"; */ ?></div>
+  <script src="/assets/js/anim-enhance.js"></script>
+</body>
+<script src="public/avatar-fallback.js"></script>
+</html>
+  </style>

@@ -1,0 +1,107 @@
+# ===========================================
+# QivoDigital — .htaccess PRO (Hostinger/Apache)
+# ===========================================
+
+# Activar motor de rewrite
+RewriteEngine On
+
+# === 1) Canonicalización + HTTPS ===
+
+# Forzar dominio sin www
+RewriteCond %{HTTP_HOST} ^www\.qivodigital\.com$ [NC]
+RewriteRule ^(.*)$ https://qivodigital.com/$1 [L,R=301]
+
+# Detectar HTTPS detrás de proxy (Hostinger)
+RewriteCond %{HTTP:X-Forwarded-Proto} =https [OR]
+RewriteCond %{HTTPS} =on
+RewriteRule ^ - [E=IS_HTTPS:on]
+
+# Forzar HTTPS si no lo está
+RewriteCond %{ENV:IS_HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# Limpiar parámetros de tracking
+RewriteCond %{QUERY_STRING} (^|&)(utm_[^&]+|gclid|fbclid|msclkid|_hsenc|_hsmi|ref|pk_[^&]+) [NC]
+RewriteRule ^ %{REQUEST_URI}? [L,R=301]
+
+# ===========================================
+# 2) Auto-servir AVIF / WEBP si existen
+# ===========================================
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_FILENAME} \.(jpe?g|png|gif)$ [NC]
+  RewriteCond %{HTTP_ACCEPT} image/avif [OR]
+  RewriteCond %{HTTP_ACCEPT} image/webp
+  RewriteRule ^ - [E=ACCEPT_MODERN:1]
+
+  RewriteCond %{ENV:ACCEPT_MODERN} =1
+  RewriteCond %{REQUEST_FILENAME}.avif -f
+  RewriteRule ^(.+)\.(jpe?g|png|gif)$ $1.avif [L]
+
+  RewriteCond %{ENV:ACCEPT_MODERN} =1
+  RewriteCond %{REQUEST_FILENAME}.webp -f
+  RewriteRule ^(.+)\.(jpe?g|png|gif)$ $1.webp [L]
+</IfModule>
+
+# MIME modern formats
+AddType image/avif avif
+AddType image/webp webp
+
+<IfModule mod_headers.c>
+  Header merge Vary "Accept"
+</IfModule>
+
+# ===========================================
+# 3) Compresión Brotli / Gzip
+# ===========================================
+<IfModule mod_brotli.c>
+  BrotliCompressionQuality 5
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css application/javascript application/json image/svg+xml font/woff2
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+  SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|webp|avif|mp4|woff2?)$ no-gzip dont-vary
+</IfModule>
+
+# ===========================================
+# 4) Cache & Expires
+# ===========================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 0 seconds"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 5 minutes"
+  ExpiresByType text/css "access plus 30 days"
+  ExpiresByType application/javascript "access plus 30 days"
+  ExpiresByType image/avif "access plus 60 days"
+  ExpiresByType image/webp "access plus 60 days"
+  ExpiresByType image/png "access plus 60 days"
+  ExpiresByType image/jpeg "access plus 60 days"
+  ExpiresByType image/svg+xml "access plus 60 days"
+  ExpiresByType image/gif "access plus 60 days"
+  ExpiresByType font/woff2 "access plus 180 days"
+</IfModule>
+
+# ===========================================
+# 5) Seguridad (Headers)
+# ===========================================
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), camera=(), microphone=(), interest-cohort=()"
+  <FilesMatch "\.(?:ttf|otf|woff|woff2)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+# ===========================================
+# 6) Defaults + Seguridad
+# ===========================================
+Options -Indexes
+DirectoryIndex index.html index.php
+ErrorDocument 404 /404.html
+
+<FilesMatch "(?:^\.|wp-config\.php|composer\.(?:json|lock)|package(-lock)?\.json|yarn\.lock|phpunit\.xml|\.env)">
+  Require all denied
+</FilesMatch>

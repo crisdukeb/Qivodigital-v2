@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CRM a Medida & Pipelines | QivoDigital</title>
+<meta name="description" content="Diseñamos CRMs que se adaptan a tu proceso: pipelines, roles, automatizaciones, métricas y vistas personalizadas."/>
+<link rel="canonical" href="https://qivodigital.com/servicios/crm/"/>
+<link rel="stylesheet" href="/assets/css/style.css"/></head><body>
+
+<div id="header-placeholder"></div>
+<script>fetch("/components/header.html").then(r=>r.text()).then(h=>document.getElementById("header-placeholder").innerHTML=h);</script>
+
+<section class="hero container" id="hero" style="padding-top:92px">
+  <div class="grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>CRM a Medida</p>
+      <h1>Visibilidad real del pipeline. Cierre con método.</h1>
+      <p class="lead">Pipelines, automatizaciones, permisos y reportes. Tu proceso, no el de un software genérico.</p>
+      <div class="actions">
+        <a href="#beneficios" class="btn btn-primary">Agenda tu consultoría</a>
+        <a href="#brief" class="btn btn-ghost">Cuéntanos tu caso</a>
+      </div>
+      <div class="badges">
+        <span class="badge">Pipelines</span><span class="badge">Roles</span>
+        <span class="badge">Automatización</span><span class="badge">KPIs</span>
+      </div>
+    </div>
+    <div class="hero-card"><p>CRM QivoDigital — vista previa</p></div>
+  </div>
+</section>
+
+<section class="container" id="beneficios" style="margin-top:32px">
+  <h2>Beneficios</h2>
+  <div class="qv-stack">
+    <article class="qv-card"><h3>🎯 Foco</h3><p>Prioriza oportunidades con datos reales.</p></article>
+    <article class="qv-card"><h3>🔄 Automatiza</h3><p>Recordatorios, asignaciones, seguimientos.</p></article>
+    <article class="qv-card"><h3>🔐 Control</h3><p>Permisos, auditoría y seguridad.</p></article>
+    <article class="qv-card"><h3>📊 Métricas</h3><p>Conversión, tiempos y proyecciones.</p></article>
+  </div>
+</section>
+
+<section class="container" id="brief" style="margin-top:24px">
+  <form class="qv-form" data-form="crm">
+    <h3>Tu CRM ideal</h3>
+    <div class="qv-grid">
+      <label>Nombre*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+      <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+      <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+      <label>Etapas del pipeline*<br><input required name="etapas" placeholder="Prospección → Cierre"/></label>
+    </div>
+    <label>Qué debe resolver (2–3 líneas)*<br>
+      <textarea required name="mensaje" rows="4" placeholder="Dolores actuales y métricas deseadas"></textarea>
+    </label>
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </form>
+</section>
+
+<div id="footer-placeholder"></div>
+<script>fetch("/components/footer.html").then(r=>r.text()).then(h=>document.getElementById("footer-placeholder").innerHTML=h);</script>
+<script src="/assets/js/main.js"></script>
+</body></html>

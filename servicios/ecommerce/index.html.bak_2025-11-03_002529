@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tiendas Online & Ecommerce que convierten | QivoDigital</title>
+<meta name="description" content="Ecommerce rápidos, seguros y optimizados: catálogo, pagos, envíos, marketing y analítica. Integración total con tus sistemas."/>
+<link rel="canonical" href="https://qivodigital.com/servicios/ecommerce/"/>
+<link rel="stylesheet" href="/assets/css/style.css"/></head><body>
+
+<div id="header-placeholder"></div>
+<script>fetch("/components/header.html").then(r=>r.text()).then(h=>document.getElementById("header-placeholder").innerHTML=h);</script>
+
+<section class="hero container" id="hero" style="padding-top:92px">
+  <div class="grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>Ecommerce de alto rendimiento</p>
+      <h1>Tu tienda lista para vender hoy, escalar mañana.</h1>
+      <p class="lead">Velocidad, SEO, UX y automatización. Conecta catálogo, pagos, logística y marketing.</p>
+      <div class="actions">
+        <a href="#stack" class="btn btn-primary">Agenda tu consultoría</a>
+        <a href="#features" class="btn btn-ghost">Características</a>
+      </div>
+      <div class="badges">
+        <span class="badge">Checkout</span><span class="badge">Logística</span>
+        <span class="badge">SEO</span><span class="badge">Analytics</span>
+      </div>
+    </div>
+    <div class="hero-card"><p>Ecommerce QivoDigital — vista previa</p></div>
+  </div>
+</section>
+
+<section class="container" id="features" style="margin-top:32px">
+  <h2>Características clave</h2>
+  <div class="qv-stack">
+    <article class="qv-card"><h3>🛒 Catálogo</h3><p>Variaciones, stock, precios por ciudad, combos.</p></article>
+    <article class="qv-card"><h3>💳 Pagos</h3><p>Integraciones locales e internacionales.</p></article>
+    <article class="qv-card"><h3>🚚 Envíos</h3><p>Tarifas, tiempos, orden de picking y tracking.</p></article>
+    <article class="qv-card"><h3>📈 Marketing</h3><p>Tags, píxeles, feed, campañas y reportes.</p></article>
+  </div>
+</section>
+
+<section class="container" id="stack" style="margin-top:24px">
+  <form class="qv-form" data-form="ecommerce">
+    <h3>Tu proyecto ecommerce</h3>
+    <div class="qv-grid">
+      <label>Nombre*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+      <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+      <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+      <label>Plataforma actual*<br>
+        <select name="plataforma" required>
+          <option value="">Selecciona…</option>
+          <option>OpenCart</option><option>Shopify</option><option>WooCommerce</option><option>Otra</option>
+        </select>
+      </label>
+    </div>
+    <label>Objetivo principal (2–3 líneas)*<br>
+      <textarea required name="mensaje" rows="4" placeholder="¿Qué debe lograr tu tienda?"></textarea>
+    </label>
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </form>
+</section>
+
+<div id="footer-placeholder"></div>
+<script>fetch("/components/footer.html").then(r=>r.text()).then(h=>document.getElementById("footer-placeholder").innerHTML=h);</script>
+<script src="/assets/js/main.js"></script>
+</body></html>

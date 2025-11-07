@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home -->
+  <url>
+    <loc>https://qivodigital.com/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Servicios Hub -->
+  <url>
+    <loc>https://qivodigital.com/servicios/</loc>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Servicios -->
+  <url><loc>https://qivodigital.com/servicios/whatsapp/</loc><priority>0.90</priority></url>
+  <url><loc>https://qivodigital.com/servicios/automatizacion/</loc><priority>0.90</priority></url>
+  <url><loc>https://qivodigital.com/servicios/ecommerce/</loc><priority>0.90</priority></url>
+  <url><loc>https://qivodigital.com/servicios/software-medida/</loc><priority>0.90</priority></url>
+  <url><loc>https://qivodigital.com/servicios/integraciones/</loc><priority>0.90</priority></url>
+  <url><loc>https://qivodigital.com/servicios/web-apps/</loc><priority>0.90</priority></url>
+  <url><loc>https://qivodigital.com/servicios/apps/</loc><priority>0.90</priority></url>
+  <url><loc>https://qivodigital.com/servicios/chatbots/</loc><priority>0.90</priority></url>
+  <url><loc>https://qivodigital.com/servicios/crm/</loc><priority>0.90</priority></url>
+
+</urlset>

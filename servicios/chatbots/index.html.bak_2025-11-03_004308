@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chatbots con IA para Ventas y Soporte | QivoDigital</title>
+<meta name="description" content="Asistentes virtuales entrenados en tus datos. Ventas, soporte y automatización 24/7 en tus canales clave."/>
+<link rel="canonical" href="https://qivodigital.com/servicios/chatbots/"/>
+<link rel="stylesheet" href="/assets/css/style.css"/></head><body>
+
+<div id="header-placeholder"></div>
+<script>fetch("/components/header.html").then(r=>r.text()).then(h=>document.getElementById("header-placeholder").innerHTML=h);</script>
+
+<section class="hero container" id="hero" style="padding-top:92px">
+  <div class="grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>IA Conversacional</p>
+      <h1>Chatbots que sí resuelven.</h1>
+      <p class="lead">Entrenados con tus procesos y FAQs, integrados a tus sistemas y medidos con KPIs.</p>
+      <div class="actions">
+        <a href="#casos" class="btn btn-primary">Agenda tu consultoría</a>
+        <a href="#brief" class="btn btn-ghost">Cuéntanos tu caso</a>
+      </div>
+      <div class="badges">
+        <span class="badge">WhatsApp</span><span class="badge">Web</span>
+        <span class="badge">Telegram</span><span class="badge">APIs</span>
+      </div>
+    </div>
+    <div class="hero-card"><p>Chatbots QivoDigital — vista previa</p></div>
+  </div>
+</section>
+
+<section class="container" id="casos" style="margin-top:32px">
+  <h2>Casos de uso</h2>
+  <div class="qv-stack">
+    <article class="qv-card"><h3>🛍️ Ventas</h3><p>Asistencia, catálogo y recomendaciones.</p></article>
+    <article class="qv-card"><h3>🛠️ Soporte</h3><p>Tickets, estados, devoluciones y NPS.</p></article>
+    <article class="qv-card"><h3>📚 FAQ</h3><p>Base de conocimiento con control de tono/seguridad.</p></article>
+    <article class="qv-card"><h3>🔄 Flujos</h3><p>Escalado humano y automatizaciones.</p></article>
+  </div>
+</section>
+
+<section class="container" id="brief" style="margin-top:24px">
+  <form class="qv-form" data-form="chatbots">
+    <h3>¿Qué debe hacer tu bot?</h3>
+    <div class="qv-grid">
+      <label>Nombre*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+      <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+      <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+      <label>Canal principal*<br>
+        <select name="canal" required>
+          <option value="">Selecciona…</option>
+          <option>WhatsApp</option><option>Web</option><option>Telegram</option>
+        </select>
+      </label>
+    </div>
+    <label>Objetivo (2–3 líneas)*<br>
+      <textarea required name="mensaje" rows="4" placeholder="¿Qué debe resolver el chatbot?"></textarea>
+    </label>
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </form>
+</section>
+
+<div id="footer-placeholder"></div>
+<script>fetch("/components/footer.html").then(r=>r.text()).then(h=>document.getElementById("footer-placeholder").innerHTML=h);</script>
+<script src="/assets/js/main.js"></script>
+</body></html>

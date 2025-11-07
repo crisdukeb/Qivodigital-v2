@@ -1,0 +1,60 @@
+<!-- /components/lead-form.html -->
+<form class="qv-form" method="post" action="/api/leads.php" data-leadform>
+  <h3 data-leadform-title>Cuéntanos tu proyecto 🚀</h3>
+
+  <div class="qv-grid">
+    <label>Nombre*<br>
+      <input required name="nombre" placeholder="Tu nombre">
+    </label>
+
+    <label>Empresa*<br>
+      <input required name="empresa" placeholder="Nombre de tu empresa">
+    </label>
+
+    <label>Email*<br>
+      <input required type="email" name="email" placeholder="tucorreo@empresa.com">
+    </label>
+
+    <!-- Campo opcional que algunas páginas usan (por ejemplo Chatbots) -->
+    <label data-leadform-canal style="display:none">
+      Canal principal*<br>
+      <select name="canal">
+        <option value="">Selecciona…</option>
+        <option>WhatsApp</option>
+        <option>Web</option>
+        <option>Telegram</option>
+      </select>
+    </label>
+
+    <label>Interés*<br>
+      <!-- Los valores deben coincidir con los que espera leads.php -->
+      <select name="interes" required>
+        <option value="">Selecciona…</option>
+        <option value="whatsapp">📲 WhatsApp & Chatbots</option>
+        <option value="automatizacion">⚙️ Automatización de procesos</option>
+        <option value="ecommerce">🛒 E-commerce</option>
+        <option value="software-medida">🏗️ Software a medida</option>
+        <option value="integraciones">🔗 Integraciones</option>
+        <option value="web-apps">🌐 Web-Apps</option>
+        <option value="apps">📱 Apps móviles</option>
+        <option value="chatbots">🤖 Chatbots e IA</option>
+        <option value="crm">📈 CRM</option>
+        <option value="otros">➕ Otros</option>
+      </select>
+    </label>
+  </div>
+
+  <label data-leadform-msg style="display:block">
+    Mensaje / Objetivo (2–3 líneas)*<br>
+    <textarea required name="mensaje" rows="4" placeholder="¿Qué necesitas y con qué sistemas debe conectarse?"></textarea>
+  </label>
+
+  <!-- Hidden esperados -->
+  <input type="hidden" name="brand" value="qivodigital">
+  <input type="hidden" name="source_page" value="">
+
+  <div class="actions" style="margin-top:8px">
+    <button class="btn btn-primary" type="submit">📩 Enviar</button>
+  </div>
+  <small>Tiempo de respuesta: &lt; 24 h.</small>
+</form>

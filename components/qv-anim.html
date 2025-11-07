@@ -1,0 +1,130 @@
+<!-- QivoDigital — FX PRO (stagger, overshoot, parallax, smooth scroll) -->
+<style>
+  @media (prefers-reduced-motion:no-preference){
+    .fx,[data-fx]{opacity:.001;transform:translate3d(0,14px,0) scale(.995);filter:blur(2px);will-change:transform,opacity,filter}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .fx,[data-fx]{opacity:1!important;transform:none!important;filter:none!important}
+  }
+</style>
+<script>
+(()=>{ "use strict";
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const SPRING='cubic-bezier(.22,1.2,.36,1)', EASE='cubic-bezier(.22,.8,.24,1)';
+
+  function frames(el){
+    const v=(el.dataset.fx||'up').toLowerCase();
+    const bounce=el.dataset.bounce==='true';
+    const base={easing:bounce?SPRING:EASE,fill:'forwards'};
+    const k={duration:Number(el.dataset.duration|| (bounce?560:420)),...base};
+    const A=(x,y,s=1,op=.001,bl=8)=>[
+      {opacity:op,transform:`translate3d(${x},${y},0) scale(${s})`,filter:`blur(${bl}px)`},
+      {opacity:1, transform:'translate3d(0,0,0) scale(1)',            filter:'blur(0)'}
+    ];
+    switch(v){
+      case 'left':  return {k,frames:A('-32px','0',1,.001,6)};
+      case 'right': return {k,frames:A('32px','0',1,.001,6)};
+      case 'down':  return {k,frames:A('0','-32px',1,.001,6)};
+      case 'zoom':  return {k,frames:A('0','10px',.92,.001,6)};
+      case 'blur':  return {k,frames:A('0','14px',1,.001,10)};
+      case 'rotate':return {k,frames:[
+        {opacity:.001,transform:'translate3d(0,14px,0) rotate(-3deg) scale(.98)',filter:'blur(4px)'},
+        {opacity:1,   transform:'translate3d(0,0,0) rotate(0) scale(1)',        filter:'blur(0)'}
+      ]};
+      default:      return {k,frames:A('0','32px',1,.001,6)}; // up
+    }
+  }
+
+  function observer(){
+    const nodes=[...document.querySelectorAll('.fx,[data-fx]')];
+    if(!nodes.length) return;
+    const io=new IntersectionObserver((ents)=>{
+      ents.forEach(e=>{
+        if(!e.isIntersecting) return;
+        const el=e.target;
+        let delay=Number(el.dataset.delay||0);
+        const p=el.parentElement;
+        if(p && p.hasAttribute('data-stagger')){
+          const step=Number(p.getAttribute('data-stagger'))||70;
+          const sib=[...p.children].filter(n=>n.matches('.fx,[data-fx]'));
+          const idx=sib.indexOf(el);
+          delay += Math.max(0,idx)*step;
+        }
+        const {k,frames:f}=frames(el);
+        (el.animate? el.animate(f,{...k,delay}) : (el.style.opacity=1));
+        el.style.opacity='1'; el.style.transform='none'; el.style.filter='none';
+        io.unobserve(el);
+      });
+    },{threshold:.16, rootMargin:'0px 0px -8%'});
+    nodes.forEach(n=>io.observe(n));
+  }
+
+  function parallax(){
+    const ps=[...document.querySelectorAll('[data-parallax]')];
+    if(!ps.length) return;
+    let ticking=false;
+    const coef=n=>Math.min(.6,Math.max(-.6, Number(n)||.2));
+    function run(){
+      const h=innerHeight*0.5;
+      ps.forEach(el=>{
+        const r=el.getBoundingClientRect();
+        const c=coef(el.dataset.parallax);
+        const off=(r.top-h)*c*-0.06;
+        el.style.transform=`translate3d(0,${off.toFixed(2)}px,0)`;
+      });
+      ticking=false;
+    }
+    addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(run)}},{passive:true});
+    run();
+  }
+
+  function autoCloseSheetOnAnchor(){
+    const t=document.getElementById('qvToggle');
+    if(!t) return;
+    document.addEventListener('click',(e)=>{
+      const a=e.target.closest('a[href^="#"]');
+      if(!a) return;
+      if(a.getAttribute('href').length>1) t.checked=false;
+    },true);
+  }
+
+  function smoothAnchors(){
+    document.addEventListener('click',(e)=>{
+      const a=e.target.closest('a[href^="#"]'); if(!a) return;
+      const id=a.getAttribute('href'); if(!id || id==='#' || id.length<2) return;
+      const target=document.querySelector(id); if(!target) return;
+      e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  }
+
+  // ===== AUTO-TAG: si no marcaste .fx, lo aplicamos por ti =====
+  function autotag(){
+    // hero
+    const h1=document.querySelector('.hero .grid > div:first-child');
+    if(h1){h1.classList.add('fx'); h1.dataset.fx='left'; h1.dataset.bounce='true';}
+    const hc=document.querySelector('.hero-card');
+    if(hc){hc.classList.add('fx'); hc.dataset.fx='right'; hc.dataset.bounce='true'; hc.setAttribute('data-parallax','.25');}
+
+    // services cards alternando
+    const cards=[...document.querySelectorAll('#servicios .qv-card')];
+    cards.forEach((c,i)=>{c.classList.add('fx'); c.dataset.fx=(i%2?'left':'right'); c.dataset.delay=String((i%5)*80); c.dataset.bounce='true';});
+
+    // listas con stagger
+    document.querySelectorAll('.qv-list').forEach(ul=>{
+      ul.setAttribute('data-stagger','70');
+      [...ul.children].forEach(li=>{li.classList.add('fx'); li.dataset.fx='up';});
+    });
+
+    // testimonios / stack
+    document.querySelectorAll('.qv-stack > *').forEach((el,i)=>{
+      el.classList.add('fx'); el.dataset.fx = (i%3===0?'zoom': i%3===1?'left':'right'); el.dataset.delay=String(60*i);
+    });
+  }
+
+  // INIT
+  autotag();
+  if(!reduce){ observer(); parallax(); }
+  autoCloseSheetOnAnchor();
+  smoothAnchors();
+})(); 
+</script>

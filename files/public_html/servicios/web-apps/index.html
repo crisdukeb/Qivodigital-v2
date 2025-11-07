@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Diseño y Desarrollo Web 100% a Medida (sin plantillas) | QivoDigital</title>
+<meta name="description" content="Sitios y apps web únicas — SEO-first, mobile-first y performance-first — integradas con pagos, WhatsApp, CRM, analítica y automatizaciones. Nada de themes genéricos: marca, UX y conversión a tu medida." />
+<link rel="canonical" href="https://qivodigital.com/servicios/web-apps/" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<meta property="og:title" content="Diseño y Desarrollo Web 100% a Medida (sin plantillas) | QivoDigital" />
+<meta property="og:description" content="Webs personalizadas, rápidas y listas para escalar. Integración total con tu operación: pagos, CRM, WhatsApp, analítica y automatizaciones." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://qivodigital.com/servicios/web-apps/" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Diseño y Desarrollo Web a Medida",
+  "provider":{"@type":"Organization","name":"QivoDigital"},
+  "areaServed":"CO",
+  "serviceType":"Web Development",
+  "description":"Sitios y apps web a medida, SEO-first y performance-first, integradas con pagos, CRM, WhatsApp y analítica."
+}
+</script>
+<style>
+  .actions.center{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .badges{display:flex;gap:10px;flex-wrap:wrap}
+  .qv-stack{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .qv-grid.auto{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .qv-card .cta{display:inline-block;margin-top:6px;font-weight:600}
+</style>
+</head>
+<body>
+
+<!-- Header compartido -->
+<div id="header-placeholder"></div>
+<script>
+fetch("/components/header.html")
+  .then(r=>r.text())
+  .then(h=>{ document.getElementById("header-placeholder").innerHTML = h; });
+</script>
+
+<!-- Anclas usadas por el header compartido -->
+<div id="hero"></div><div id="servicios"></div><div id="form-hero"></div><div id="form-servicios"></div>
+
+<!-- HERO -->
+<section class="hero container" style="padding-top:92px">
+  <div class="grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>Webs 100% personalizadas</p>
+      <h1>Diseño y Desarrollo Web <br/>a Medida (sin plantillas) ✨</h1>
+      <p class="lead">SEO-first, mobile-first y performance-first. Integramos tu web con <b>pagos</b>, <b>WhatsApp</b>, <b>CRM</b>, <b>analítica</b> y automatizaciones para que venda y opere.</p>
+      <div class="actions center">
+        <a href="#brief" class="btn btn-primary">Iniciar diagnóstico</a>
+        <a href="#casos" class="btn btn-ghost">Tipos de proyectos</a>
+      </div>
+      <div class="badges" style="margin-top:12px">
+        <span class="badge">SEO técnico</span>
+        <span class="badge">UX & Conversión</span>
+        <span class="badge">Integraciones</span>
+        <span class="badge">Escalabilidad</span>
+      </div>
+    </div>
+    <div class="hero-card"><p>Vista previa — ecosistema QivoDigital</p></div>
+  </div>
+</section>
+
+<!-- ¿QUÉ CREAMOS? -->
+<section class="container" id="casos" style="margin-top:32px">
+  <h2>¿Qué creamos?</h2>
+  <div class="qv-stack">
+    <article class="qv-card"><h3>📈 Landing pages de alto rendimiento</h3><p>Diseñadas para leads y ventas con A/B, mapas de calor y micro-interacciones.</p></article>
+    <article class="qv-card"><h3>🏢 Web corporativa</h3><p>Branding sólido, velocidad y arquitectura de contenidos para posicionar.</p></article>
+    <article class="qv-card"><h3>🛒 Ecommerce ligero</h3><p>Catálogo, pagos, envíos, promociones y logística integrada; listo para crecer.</p></article>
+    <article class="qv-card"><h3>⚙️ Web apps / Portales</h3><p>Áreas privadas, roles, formularios avanzados, flujos y datos en tiempo real.</p></article>
+  </div>
+
+  <h3 style="margin-top:18px">Nichos y sectores</h3>
+  <div class="qv-grid auto">
+    <div class="qv-card"><strong>Salud & bienestar</strong><br/>Clínicas, reservas, historias y consentimientos.</div>
+    <div class="qv-card"><strong>Educación</strong><br/>Academias, cursos, pagos, campus y progreso.</div>
+    <div class="qv-card"><strong>Retail & D2C</strong><br/>Catálogo, campañas, píxeles y remarketing.</div>
+    <div class="qv-card"><strong>Servicios profesionales</strong><br/>Agenda, consultorías, proposals y CRM.</div>
+    <div class="qv-card"><strong>Artistas & creadores</strong><br/>Portafolios, membresías y checkout.</div>
+    <div class="qv-card"><strong>B2B</strong><br/>Mayoristas, cotizaciones y autenticación.</div>
+  </div>
+</section>
+
+<!-- DIFERENCIADORES -->
+<section class="container" style="margin-top:28px">
+  <h2>¿Por qué a medida (y no plantillas)?</h2>
+  <ul class="qv-list">
+    <li>🚀 Performance real: Core Web Vitals, TTFB bajo y carga perceptiva rápida.</li>
+    <li>🔎 SEO técnico de base: schema, canónicos, sitemaps y arquitectura limpia.</li>
+    <li>🧠 Conversión: UX, microcopys y analítica accionable (GTM/GA4/Meta/TikTok).</li>
+    <li>🔗 Integración total: pagos, WhatsApp, CRM, facturación, logística y BI.</li>
+    <li>🧩 Escalable: componentes y rutas para crecer sin rehacer.</li>
+  </ul>
+</section>
+
+<!-- PROCESO -->
+<section class="container" style="margin-top:28px">
+  <h2>Proceso QivoDigital</h2>
+  <div class="qv-stack">
+    <article class="qv-card"><h3>1) Diagnóstico</h3><p>Objetivos, público, KPIs y requisitos técnicos.</p></article>
+    <article class="qv-card"><h3>2) UX & Contenido</h3><p>Mapa, wireframes, tono y estructura SEO.</p></article>
+    <article class="qv-card"><h3>3) UI & Desarrollo</h3><p>Componentes, accesibilidad y animaciones sutiles.</p></article>
+    <article class="qv-card"><h3>4) Integraciones</h3><p>Pagos, WhatsApp/QivoSend, CRM, analítica y automatizaciones.</p></article>
+    <article class="qv-card"><h3>5) QA & Lanzamiento</h3><p>Pruebas multi-dispositivo, seguridad, rendimiento y monitoreo.</p></article>
+  </div>
+</section>
+
+<!-- STACK -->
+<section class="container" style="margin-top:28px">
+  <h2>Stack recomendado</h2>
+  <div class="qv-grid auto">
+    <div class="qv-card"><strong>Frontend</strong><br/>HTML/CSS optimizado, JS, animaciones ligeras, accesibilidad.</div>
+    <div class="qv-card"><strong>Headless / CMS</strong><br/>Integrable a tu stack actual (o sin CMS si es landing).</div>
+    <div class="qv-card"><strong>Analytics</strong><br/>GTM, GA4, Meta/TikTok, eventos y embudos.</div>
+    <div class="qv-card"><strong>QivoSend</strong><br/>WhatsApp, bots, campañas y medición por contacto.</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="container" style="margin-top:28px">
+  <h2>Preguntas frecuentes</h2>
+  <div class="qv-stack">
+    <article class="qv-card"><h3>¿Usan plantillas?</h3><p>No. Todo es a medida con diseño y componentes propios.</p></article>
+    <article class="qv-card"><h3>¿Pueden migrar mi web actual?</h3><p>Sí. Migramos contenido, conservamos SEO y mejoramos rendimiento.</p></article>
+    <article class="qv-card"><h3>¿Incluye copy y SEO?</h3><p>Incluimos base SEO técnica y estructura; opcional copy/keyword research avanzado.</p></article>
+    <article class="qv-card"><h3>¿Conectan a pasarelas y CRM?</h3><p>Sí. Pagos locales/internacionales, WhatsApp, CRMs y analítica.</p></article>
+  </div>
+</section>
+
+<!-- FORM (conectado a /leads.php) -->
+<section class="container" id="brief" style="margin:32px 0 60px">
+  <form class="qv-form" data-form="web-apps">
+    <h3>🚀 Quiero mi web a medida</h3>
+    <div class="qv-grid auto">
+      <label>👤 Nombre completo*<br><input required name="nombre" placeholder="Tu nombre" /></label>
+      <label>🏢 Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa" /></label>
+      <label>📧 Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com" /></label>
+      <label>🎯 Servicio de interés*<br>
+        <!-- Valores PERMITIDOS por leads.php -->
+        <select name="interes" required>
+          <option value="">Selecciona…</option>
+          <option value="web-apps" selected>Webs / Web-Apps</option>
+          <option value="ecommerce">E-commerce</option>
+          <option value="whatsapp">WhatsApp & Chatbots</option>
+          <option value="automatizacion">Automatización</option>
+          <option value="integraciones">Integraciones</option>
+          <option value="software-medida">Software a medida</option>
+          <option value="apps">Apps móviles</option>
+          <option value="chatbots">Chatbots e IA</option>
+          <option value="crm">CRM</option>
+          <option value="otros">Otros</option>
+        </select>
+      </label>
+    </div>
+    <label>📝 Objetivo (2–4 líneas)*<br>
+      <textarea required name="mensaje" rows="4" placeholder="¿Qué debe lograr tu web y con qué integraciones (pagos, WhatsApp, CRM, BI)?"></textarea>
+    </label>
+
+    <!-- Campos ocultos esperados -->
+    <input type="hidden" name="brand" value="qivodigital"/>
+    <input type="hidden" name="source_page" value="/servicios/web-apps/"/>
+
+    <div class="actions center" style="margin-top:8px">
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </div>
+    <small>⏱️ Tiempo de respuesta: &lt; 24 h.</small>
+  </form>
+</section>
+
+<!-- CTA final -->
+<section class="container" style="margin:0 0 56px">
+  <div class="cta">
+    <h3>¿Listo para una web que realmente funcione? 💼</h3>
+    <a class="btn btn-primary" href="#brief">Agenda tu consultoría</a>
+    <a class="btn btn-ghost" href="/servicios/">Volver a Servicios</a>
+  </div>
+</section>
+
+<!-- Footer compartido -->
+<div id="footer-placeholder"></div>
+<script>
+fetch("/components/footer.html")
+  .then(r=>r.text())
+  .then(h=>{ document.getElementById("footer-placeholder").innerHTML = h; });
+</script>
+
+<!-- JS FORM universal: envía a /leads.php + UTM -->
+<script>
+document.addEventListener('submit', async (e) => {
+  const form = e.target.closest('form.qv-form');
+  if (!form) return;
+  e.preventDefault();
+
+  const fd = new FormData(form);
+  if (!fd.get('brand')) fd.set('brand','qivodigital');
+  if (!fd.get('source_page')) fd.set('source_page', location.pathname);
+
+  const params = new URLSearchParams(location.search);
+  ['utm_source','utm_medium','utm_campaign'].forEach(k=>{
+    if (params.get(k) && !fd.get(k)) fd.set(k, params.get(k));
+  });
+
+  try {
+    const res = await fetch('/leads.php', { method:'POST', body: fd });
+    const json = await res.json();
+    if (json.ok) {
+      form.reset();
+      alert('✅ ¡Listo! Recibimos tu solicitud y te contactamos en menos de 24 h.');
+    } else {
+      alert('❌ No pudimos registrar tu solicitud. Intenta nuevamente.');
+    }
+  } catch (err) {
+    alert('⚠️ Error de red. Verifica tu conexión e intenta otra vez.');
+  }
+});
+</script>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

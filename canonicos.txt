@@ -1,0 +1,11 @@
+servicios/whatsapp/index.html:5:<link rel="canonical" href="https://qivodigital.com/servicios/whatsapp/"/>
+servicios/index.html:9:  <link rel="canonical" href="/servicios/"/>
+servicios/software-medida/index.html:5:<link rel="canonical" href="https://qivodigital.com/servicios/software-medida/"/>
+servicios/web-apps/index.html:8:<link rel="canonical" href="https://qivodigital.com/servicios/web-apps/" />
+servicios/webs/index.html:8:  <link rel="canonical" href="https://qivodigital.com/servicios/webs/" />
+servicios/ecommerce/index.html:5:<link rel="canonical" href="https://qivodigital.com/servicios/ecommerce/"/>
+servicios/automatizacion/index.html:8:  <link rel="canonical" href="https://qivodigital.com/servicios/automatizacion/" />
+servicios/crm/index.html:5:<link rel="canonical" href="https://qivodigital.com/servicios/crm/"/>
+servicios/apps/index.html:8:  <link rel="canonical" href="https://qivodigital.com/servicios/apps/" />
+servicios/integraciones/index.html:5:<link rel="canonical" href="https://qivodigital.com/servicios/integraciones/"/>
+servicios/chatbots/index.html:5:<link rel="canonical" href="https://qivodigital.com/servicios/chatbots/"/>

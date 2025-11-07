@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WhatsApp + IA que convierte | QivoDigital</title>
+<meta name="description" content="Campañas, chatbots con IA, automatización de ventas y soporte en WhatsApp con integración oficial y datos accionables."/>
+<link rel="canonical" href="https://qivodigital.com/servicios/whatsapp/"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<style>
+  .actions.center{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .badges{display:flex;gap:10px;flex-wrap:wrap}
+  .qv-stack{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+</style>
+</head><body>
+
+<div id="header-placeholder"></div>
+<script>
+fetch("/components/header.html").then(r=>r.text()).then(h=>document.getElementById("header-placeholder").innerHTML=h);
+</script>
+
+<section class="hero container" id="hero" style="padding-top:92px">
+  <div class="grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>WhatsApp + IA Oficial</p>
+      <h1>Conversaciones que venden 📈 Operación que escala 🚀</h1>
+      <p class="lead">
+        Activamos WhatsApp con integración oficial: bots con IA, campañas, pagos, CRM y analítica. 
+        Más cierres 💳, menos tiempos muertos ⏱️.
+      </p>
+      <div class="actions center">
+        <a href="#form-wa" class="btn btn-primary">🚀 Quiero escalar por WhatsApp</a>
+        <a href="#modulos" class="btn btn-ghost">🧩 Ver módulos</a>
+      </div>
+      <div class="badges">
+        <span class="badge">API Oficial</span><span class="badge">Chatbots con IA</span>
+        <span class="badge">Métricas</span><span class="badge">CRM + Pagos</span>
+      </div>
+    </div>
+    <div class="hero-card"><p>WhatsApp + QivoSend</p></div>
+  </div>
+</section>
+
+<section class="container" id="modulos" style="margin-top:32px">
+  <h2>Módulos que activamos</h2>
+  <div class="qv-stack">
+    <article class="qv-card"><h3>📨 Campañas</h3><p>Segmentación, reputación, plantillas y A/B para ventas.</p></article>
+    <article class="qv-card"><h3>🤖 Chatbots con IA</h3><p>Ventas, soporte y calificación 24/7 con handoff humano.</p></article>
+    <article class="qv-card"><h3>🔗 Integraciones</h3><p>ERP/CRM · Pagos · Órdenes · Webhooks resilientes.</p></article>
+    <article class="qv-card"><h3>📊 Analytics</h3><p>Dashboards de conversión, SLA y eficacia por campaña.</p></article>
+  </div>
+</section>
+
+<section class="container" id="form-wa" style="margin:40px 0 60px">
+  <form class="qv-form" data-form="whatsapp">
+    <h3>Quiero activar WhatsApp con IA ✅</h3>
+
+    <div class="qv-grid">
+      <label>👤 Nombre*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+      <label>🏢 Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+      <label>📧 Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+
+      <label>🎯 ¿Qué servicio te interesa?*<br>
+        <select name="interes" required>
+          <option value="">Selecciona…</option>
+          <option value="whatsapp" selected>📲 WhatsApp & Chatbots</option>
+          <option value="automatizacion">⚙️ Automatización</option>
+          <option value="ecommerce">🛒 E-commerce</option>
+          <option value="software-medida">🧩 Software a medida</option>
+          <option value="integraciones">🔌 Integraciones</option>
+          <option value="web-apps">💻 Web-Apps</option>
+          <option value="apps">📱 Apps móviles</option>
+          <option value="chatbots">🤖 Chatbots e IA</option>
+          <option value="crm">📊 CRM</option>
+          <option value="otros">➕ Otros</option>
+        </select>
+      </label>
+    </div>
+
+    <label>📝 ¿Qué necesitas automatizar?<br>
+      <textarea name="mensaje" rows="4" placeholder="Venta · Atención · Carritos · Pagos · Integraciones"></textarea>
+    </label>
+
+    <input type="hidden" name="brand" value="qivodigital"/>
+    <input type="hidden" name="source_page" value="/servicios/whatsapp/"/>
+
+    <div class="actions center" style="margin-top:12px">
+      <button class="btn btn-primary" type="submit">Enviar ✅</button>
+    </div>
+    <small>⏱️ Te respondemos en menos de 24h</small>
+  </form>
+</section>
+
+<div id="footer-placeholder"></div>
+<script>
+fetch("/components/footer.html").then(r=>r.text()).then(h=>document.getElementById("footer-placeholder").innerHTML=h);
+</script>
+
+<script>
+// envío a leads.php + UTM
+document.addEventListener('submit', async (e) => {
+  const form = e.target.closest('form.qv-form');
+  if (!form) return;
+  e.preventDefault();
+
+  const fd = new FormData(form);
+  if (!fd.get('brand')) fd.set('brand','qivodigital');
+  if (!fd.get('source_page')) fd.set('source_page', location.pathname);
+
+  const params = new URLSearchParams(location.search);
+  ['utm_source','utm_medium','utm_campaign'].forEach(k=>{
+    if (params.get(k) && !fd.get(k)) fd.set(k, params.get(k));
+  });
+
+  try {
+    const res = await fetch('/leads.php', { method:'POST', body: fd });
+    const json = await res.json();
+    if (json.ok) {
+      form.reset();
+      alert('✅ Recibimos tu solicitud. Te escribiremos en breve.');
+    } else {
+      alert('❌ Error al registrar. Intenta de nuevo.');
+    }
+  } catch (err) {
+    alert('⚠️ Error de red. Revisa tu conexión.');
+  }
+});
+</script>
+
+<script src="/assets/js/main.js"></script>
+</body></html>

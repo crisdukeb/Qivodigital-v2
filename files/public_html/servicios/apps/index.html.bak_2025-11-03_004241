@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desarrollo de Apps Móviles & Desktop | QivoDigital</title>
+  <meta name="description" content="Apps nativas e híbridas con performance, UX de alto nivel y analytics. Integradas a tus sistemas y listas para escalar." />
+  <link rel="canonical" href="https://qivodigital.com/servicios/apps/" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+  <script>fetch("/components/header.html").then(r=>r.text()).then(h=>document.getElementById("header-placeholder").innerHTML=h);</script>
+
+  <section class="hero container" id="hero" style="padding-top:92px">
+    <div class="grid">
+      <div>
+        <p class="kicker"><span class="dot"></span>Apps de Alto Desempeño</p>
+        <h1>Apps que la gente sí usa (y recomienda).</h1>
+        <p class="lead">Diseño, performance, seguridad y analytics. Conecta pagos, inventarios, chat y notificaciones.</p>
+        <div class="actions">
+          <a href="#brief" class="btn btn-primary">Agenda tu consultoría</a>
+          <a href="#features" class="btn btn-ghost">Características</a>
+        </div>
+        <div class="badges">
+          <span class="badge">iOS/Android</span>
+          <span class="badge">React Native / Flutter</span>
+          <span class="badge">Notificaciones & Pagos</span>
+          <span class="badge">Analytics</span>
+        </div>
+      </div>
+      <div class="hero-card"><p>Apps QivoDigital — vista previa</p></div>
+    </div>
+  </section>
+
+  <section class="container" id="features" style="margin-top:32px">
+    <h2>Lo que entregamos</h2>
+    <div class="qv-stack">
+      <article class="qv-card"><h3>⚡ Performance real</h3><p>Velocidad y estabilidad con pipelines CI/CD.</p></article>
+      <article class="qv-card"><h3>🔐 Seguridad</h3><p>Autenticación, roles, cifrado y mejores prácticas.</p></article>
+      <article class="qv-card"><h3>🔌 Integraciones</h3><p>APIs, pagos, inventarios, chat, push, mapas y más.</p></article>
+      <article class="qv-card"><h3>📈 Medición</h3><p>Métricas de uso, retención y conversión en tiempo real.</p></article>
+    </div>
+  </section>
+
+  <section class="container" id="brief" style="margin-top:24px">
+    <form class="qv-form" data-form="apps">
+      <h3>Cuéntanos tu app</h3>
+      <div class="qv-grid">
+        <label>Nombre*<br><input required name="nombre" placeholder="Tu nombre" /></label>
+        <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa" /></label>
+        <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com" /></label>
+        <label>Tipo de app*<br>
+          <select name="tipo" required>
+            <option value="">Selecciona…</option>
+            <option>iOS / Android</option>
+            <option>Híbrida</option>
+            <option>Desktop</option>
+          </select>
+        </label>
+      </div>
+      <label>Objetivo principal (2–3 líneas)*<br>
+        <textarea required name="mensaje" rows="4" placeholder="¿Qué problema resuelve tu app?"></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script>fetch("/components/footer.html").then(r=>r.text()).then(h=>document.getElementById("footer-placeholder").innerHTML=h);</script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

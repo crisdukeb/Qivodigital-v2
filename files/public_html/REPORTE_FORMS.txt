@@ -1,0 +1,19 @@
+=== ARCHIVOS CON <form> ===
+./index.html
+./servicios/apps/index.html
+./servicios/automatizacion/index.html
+./servicios/chatbots/index.html
+./servicios/crm/index.html
+./servicios/ecommerce/index.html
+./servicios/integraciones/index.html
+./servicios/software-medida/index.html
+./servicios/web-apps/index.html
+./servicios/webs/index.html
+./servicios/whatsapp/index.html
+
+=== ARCHIVOS CON <select name="interes"> ===
+./index.html
+./servicios/whatsapp/index.html
+ 11 lista_forms.txt
+  2 lista_interes.txt
+ 13 total

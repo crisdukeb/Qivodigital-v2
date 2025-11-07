@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Automatización de Procesos con IA | QivoDigital</title>
+  <meta name="description" content="Automatizamos procesos, integraciones y flujos de negocio con IA. Menos tareas manuales, más resultados medibles. Implementación en 5–7 semanas." />
+  <link rel="canonical" href="https://qivodigital.com/servicios/automatizacion/" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER (misma UI de Home) -->
+  <div id="header-placeholder"></div>
+  <script>fetch("/components/header.html").then(r=>r.text()).then(h=>document.getElementById("header-placeholder").innerHTML=h);</script>
+
+  <!-- HERO página de servicio -->
+  <section class="hero container" id="hero" style="padding-top:92px">
+    <div class="grid">
+      <div>
+        <p class="kicker"><span class="dot"></span>Automatización Empresarial</p>
+        <h1>Procesos que corren solos. Resultados que se ven.</h1>
+        <p class="lead">Orquestamos bots, integraciones y reglas con <b>IA</b> para que tu operación sea precisa, rápida y medible.</p>
+        <div class="actions">
+          <a href="#contacto" class="btn btn-primary">Agenda tu consultoría estratégica</a>
+          <a href="#beneficios" class="btn btn-ghost">Ver beneficios</a>
+        </div>
+        <div class="badges">
+          <span class="badge">Bots & RPA</span>
+          <span class="badge">Workflows con IA</span>
+          <span class="badge">APIs & Webhooks</span>
+          <span class="badge">Dashboards</span>
+        </div>
+      </div>
+      <div class="hero-card"><p>Automatizaciones QivoDigital — vista previa</p></div>
+    </div>
+  </section>
+
+  <section class="container" id="beneficios" style="margin-top:32px">
+    <h2>Beneficios inmediatos</h2>
+    <ul class="qv-list">
+      <li>Menos tareas repetitivas, más foco estratégico</li>
+      <li>Visibilidad en tiempo real (KPIs y alertas)</li>
+      <li>Errores humanos ↓ y cumplimiento ↑</li>
+      <li>Implementación en 5–7 semanas</li>
+    </ul>
+  </section>
+
+  <section class="container" style="margin-top:24px">
+    <h2>Qué implementamos</h2>
+    <div class="qv-stack">
+      <article class="qv-card"><h3>🤖 Bots operativos</h3><p>Lectura de correos, órdenes, inventarios, exportaciones, conciliaciones.</p></article>
+      <article class="qv-card"><h3>🔌 Integraciones</h3><p>APIs, Webhooks, ERP/CRM, pagos, mensajería, logística, BI.</p></article>
+      <article class="qv-card"><h3>📊 Paneles y métricas</h3><p>Datos accionables: ventas, tiempos, SLA, costos, cuellos de botella.</p></article>
+      <article class="qv-card"><h3>🧠 IA en el flujo</h3><p>Clasificar, resumir, decidir y enrutar tareas con modelos inteligentes.</p></article>
+    </div>
+  </section>
+
+  <section class="container" id="cta" style="margin:40px auto">
+    <h2>¿Listo para operar en automático?</h2>
+    <p>Diseñamos y desplegamos tu flujo completo con garantías y métricas.</p>
+    <div class="actions">
+      <a href="#contacto" class="btn btn-primary">Iniciar diagnóstico</a>
+      <a href="/servicios/whatsapp/" class="btn btn-ghost">WhatsApp + IA</a>
+    </div>
+  </section>
+
+  <section class="container" id="contacto" style="margin-top:24px">
+    <form class="qv-form" data-form="automatizacion">
+      <h3>Cuéntanos tu proceso a automatizar</h3>
+      <div class="qv-grid">
+        <label>Nombre*<br><input required name="nombre" placeholder="Tu nombre" /></label>
+        <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa" /></label>
+        <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com" /></label>
+        <label>Área a automatizar*<br>
+          <select name="interes" required>
+            <option value="">Selecciona…</option>
+            <option>Ventas/Leads</option>
+            <option>Operaciones</option>
+            <option>Atención al cliente</option>
+            <option>Finanzas</option>
+          </select>
+        </label>
+      </div>
+      <label>Describe el flujo actual (2–4 líneas)*<br>
+        <textarea required name="mensaje" rows="4" placeholder="¿Qué hace hoy tu equipo? ¿Qué debería hacer solo?"></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+  <script>fetch("/components/footer.html").then(r=>r.text()).then(h=>document.getElementById("footer-placeholder").innerHTML=h);</script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

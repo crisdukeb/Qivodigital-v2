@@ -1,0 +1,11 @@
+./index.html
+./servicios/apps/index.html
+./servicios/automatizacion/index.html
+./servicios/chatbots/index.html
+./servicios/crm/index.html
+./servicios/ecommerce/index.html
+./servicios/integraciones/index.html
+./servicios/software-medida/index.html
+./servicios/web-apps/index.html
+./servicios/webs/index.html
+./servicios/whatsapp/index.html

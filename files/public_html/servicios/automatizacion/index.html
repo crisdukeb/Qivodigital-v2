@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Automatización de Procesos con IA | QivoDigital</title>
+  <meta name="description" content="Automatizamos procesos, integraciones y flujos de negocio con IA. Menos tareas manuales, más resultados medibles. Implementación ágil según el alcance."/>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+  <link rel="canonical" href="/servicios/automatizacion/"/>
+  <style>
+    .actions.center{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .qv-card .cta{display:block;margin-top:8px;font-weight:600}
+    .qv-hero-gradient .gtext{
+      background:linear-gradient(90deg,#e6f0ff 0%,#a5b4fc 50%,#60a5fa 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("/components/header.html").then(r=>r.text()).then(h=>document.getElementById("header-placeholder").innerHTML=h);
+  </script>
+
+  <!-- HERO -->
+  <section class="hero container qv-hero-gradient" id="hero" style="padding-top:92px">
+    <div class="grid">
+      <div>
+        <p class="kicker"><span class="dot"></span>Automatización Empresarial</p>
+        <h1 class="gtext">Procesos que corren solos. Resultados que se ven.</h1>
+        <p class="lead">Orquestamos bots, integraciones y reglas con <b>IA</b> para que tu operación sea <b>precisa</b>, <b>rápida</b> y <b>medible</b>. 🚀��</p>
+        <div class="actions center" style="margin-top:14px">
+          <a href="#form-automatizacion" class="btn btn-primary">Agenda tu consultoría estratégica</a>
+          <a href="#beneficios" class="btn btn-ghost">Ver beneficios</a>
+        </div>
+        <div class="badges" style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+          <span class="badge">Bots & RPA</span>
+          <span class="badge">Workflows con IA</span>
+          <span class="badge">APIs & Webhooks</span>
+          <span class="badge">Dashboards</span>
+        </div>
+      </div>
+      <div class="hero-card"><p>Automatizaciones QivoDigital — vista previa</p></div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="container" id="beneficios" style="margin-top:32px">
+    <h2>Beneficios inmediatos</h2>
+    <ul class="qv-list">
+      <li>⏱️ Menos tareas repetitivas, más foco estratégico.</li>
+      <li>📡 Visibilidad en tiempo real (KPIs y alertas).</li>
+      <li>✅ Menos errores humanos y mayor cumplimiento.</li>
+      <li>⚡ Despliegue ágil según alcance y dependencias.</li>
+    </ul>
+  </section>
+
+  <!-- QUÉ IMPLEMENTAMOS -->
+  <section class="container" style="margin-top:24px">
+    <h2>Qué implementamos</h2>
+    <div class="qv-stack">
+      <article class="qv-card"><h3>🤖 Bots operativos</h3><p>Lectura de correos, órdenes, inventarios, exportaciones y conciliaciones con reglas y excepciones controladas.</p><span class="cta">Casos típicos →</span></article>
+      <article class="qv-card"><h3>🔌 Integraciones</h3><p>APIs y Webhooks con ERP/CRM, pagos, mensajería, logística y BI. Retries, colas y trazabilidad end-to-end.</p><span class="cta">Arquitectura de integraciones →</span></article>
+      <article class="qv-card"><h3>📊 Paneles y métricas</h3><p>Datos accionables: ventas, tiempos, SLA, costos y cuellos de botella. Dashboards y alertas para decisiones.</p><span class="cta">Ver métricas clave →</span></article>
+      <article class="qv-card"><h3>🧠 IA en el flujo</h3><p>Clasificar, resumir, decidir y enrutar tareas con modelos inteligentes y políticas de seguridad aplicadas.</p><span class="cta">IA aplicada al proceso →</span></article>
+    </div>
+  </section>
+
+  <!-- FORM (IDÉNTICO A INDEX EN ESTRUCTURA Y JS) -->
+  <section class="container" id="form-automatizacion" style="margin:40px 0 60px">
+    <form class="qv-form" data-form="automatizacion">
+      <h3>Quiero automatizar mi empresa</h3>
+      <div class="qv-grid">
+        <label>Nombre completo*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+        <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+        <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+        <label>¿En qué tipo de sistema estás interesado?<br>
+          <!-- SOLO valores permitidos por leads.php -->
+          <select name="interes" required>
+            <option value="" selected>Selecciona…</option>
+            <option value="whatsapp">WhatsApp & Chatbots</option>
+            <option value="automatizacion" selected>Automatización de procesos</option>
+            <option value="ecommerce">E-commerce</option>
+            <option value="software-medida">Software a medida</option>
+            <option value="integraciones">Integraciones</option>
+            <option value="web-apps">Web-Apps</option>
+            <option value="apps">Apps móviles</option>
+            <option value="chatbots">Chatbots e IA</option>
+            <option value="crm">CRM</option>
+            <option value="otros">Otros</option>
+          </select>
+        </label>
+      </div>
+      <small>Nosotros te contactamos en menos de 24h.</small>
+      <button class="btn btn-primary" type="submit">Enviar</button>
+      <!-- Campos ocultos esperados por leads.php -->
+      <input type="hidden" name="brand" value="qivodigital"/>
+      <input type="hidden" name="source_page" value="/servicios/automatizacion/"/>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("/components/footer.html").then(r=>r.text()).then(h=>document.getElementById("footer-placeholder").innerHTML=h);
+  </script>
+
+  <!-- ENVÍO: MISMO FLUJO QUE INDEX, ENDPOINT /leads.php -->
+  <script>
+    document.addEventListener('submit', async (e) => {
+      const form = e.target.closest('form.qv-form');
+      if (!form) return;
+      e.preventDefault();
+
+      const fd = new FormData(form);
+      if (!fd.get('brand')) fd.set('brand','qivodigital');
+      if (!fd.get('source_page')) fd.set('source_page', location.pathname);
+
+      // UTM desde querystring si no vienen en el form
+      const params = new URLSearchParams(location.search);
+      ['utm_source','utm_medium','utm_campaign'].forEach(k=>{
+        if (params.get(k) && !fd.get(k)) fd.set(k, params.get(k));
+      });
+
+      try {
+        const res = await fetch('/leads.php', { method:'POST', body: fd });
+        const json = await res.json();
+        if (json.ok) {
+          form.reset();
+          alert('✅ Recibimos tu solicitud. Te contactaremos en menos de 24 h.');
+        } else {
+          alert('❌ No pudimos registrar tu solicitud. Intenta nuevamente.');
+        }
+      } catch (err) {
+        alert('⚠️ Error de red. Verifica tu conexión e intenta otra vez.');
+      }
+    });
+  </script>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

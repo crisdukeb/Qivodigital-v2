@@ -1,0 +1,1 @@
+document.addEventListener("qv-header-loaded",()=>{if(typeof toast==="undefined"){console.warn("Toast API aún no disponible");return;}window.alert=(msg)=>toast.ok("✅ Correcto",String(msg || ""));console.log("✅ Toasts activos en esta página");});

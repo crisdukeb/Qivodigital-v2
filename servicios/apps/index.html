@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Desarrollo de Apps Móviles & Desktop | QivoDigital</title>
+  <meta name="description" content="Apps nativas e híbridas con performance, UX de alto nivel y analytics. Integradas a tus sistemas (pagos, inventarios, chat, notificaciones) y listas para escalar."/>
+  <link rel="canonical" href="https://qivodigital.com/servicios/apps/"/>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+
+  <!-- ===== Estilos específicos de la página (no rompe nada existente) ===== -->
+  <style>
+    :root{
+      --ink:#e9f2ff;--muted:#b8c4d6;--ring:rgba(255,255,255,.14);
+      --bgcard:rgba(255,255,255,.04);--bgsoft:rgba(255,255,255,.025);--br:22px;
+      --g1:#26e0c0;--g2:#7d61ff;--g3:#ff7ad6;--yl:#ffd36a;
+    }
+    .actions.center{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .badges{display:flex;gap:10px;flex-wrap:wrap}
+    .qv-stack{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .qv-card{background:var(--bgcard);border:1px solid var(--ring);border-radius:16px;padding:16px}
+    .qv-card .cta{display:inline-block;margin-top:6px;font-weight:600}
+    .qv-card .cta i{font-style:normal}
+    .hero.container{position:relative}
+    .hero .grid{align-items:center}
+    .hero-gradient{background:linear-gradient(180deg,rgba(255,255,255,.05),transparent);border-bottom:1px solid var(--ring)}
+    .kicker{letter-spacing:.3px;color:var(--ink);opacity:.95}
+    .lead{color:var(--muted)}
+    .trustbar{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+    .trustbar .pill{border:1px dashed var(--ring);padding:8px 12px;border-radius:999px;background:var(--bgsoft);font-weight:800;white-space:nowrap}
+    .metric-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:10px}
+    .metric{background:var(--bgsoft);border:1px solid var(--ring);border-radius:14px;padding:14px;text-align:center}
+    .metric b{font-size:22px}
+    .highlight{display:grid;gap:16px;grid-template-columns:1.1fr .9fr;align-items:center;background:var(--bgcard);border:1px solid var(--ring);border-radius:var(--br);padding:18px}
+    .highlight .shot{aspect-ratio:16/10;background:rgba(255,255,255,.06);border:1px solid var(--ring);border-radius:14px;display:grid;place-items:center}
+    @media(max-width:980px){.highlight{grid-template-columns:1fr}}
+    .process{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .step{background:var(--bgsoft);border:1px solid var(--ring);border-radius:14px;padding:14px}
+    .stack{display:flex;flex-wrap:wrap;gap:10px}
+    .stack .chip{padding:8px 12px;border-radius:999px;background:var(--bgcard);border:1px solid var(--ring);font-weight:800}
+    .testi{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .quote{background:var(--bgcard);border:1px solid var(--ring);border-radius:16px;padding:16px}
+    .quote b{display:block;margin-top:8px}
+    .cta-band{margin:28px 0;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));border-radius:18px;padding:20px;text-align:center}
+    .cta-band h3{color:#0b0f1a;margin:0 0 8px}
+    .cta-band p{color:#0b0f1a}
+    .faq details{background:var(--bgcard);border:1px solid var(--ring);border-radius:12px;padding:12px}
+    .faq details+details{margin-top:10px}
+    .label{font-weight:900;background:linear-gradient(90deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER compartido (NO modificado) -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("/components/header.html")
+      .then(r=>r.text())
+      .then(h=>{
+        document.getElementById("header-placeholder").innerHTML=h;
+        document.dispatchEvent(new Event("qv-header-loaded"));
+      });
+  </script>
+
+  <!-- HERO (mejor copy + trustbar + métricas) -->
+  <section class="hero container hero-gradient" id="hero" style="padding-top:92px">
+    <div class="grid">
+      <div>
+        <p class="kicker"><span class="dot"></span>Apps de Alto Desempeño</p>
+        <h1>Apps que la gente sí usa (y recomienda). 📱✨</h1>
+        <p class="lead">Velocidad ⚡, UX impecable, seguridad 🔐 y analytics 📊. Conecta pagos, inventarios, chat y notificaciones para <b>impacto real</b> en ventas y operación.</p>
+        <div class="actions center">
+          <a href="#brief" class="btn btn-primary">Agenda tu consultoría</a>
+          <a href="#features" class="btn btn-ghost">Ver características</a>
+        </div>
+
+        <!-- confianza + quick-metrics -->
+        <div class="trustbar">
+          <span class="pill">iOS / Android</span>
+          <span class="pill">React Native / Flutter</span>
+          <span class="pill">Notificaciones & Pagos</span>
+          <span class="pill">Analytics</span>
+        </div>
+        <div class="metric-grid">
+          <div class="metric"><b>+24%</b><div>Conversión</div></div>
+          <div class="metric"><b>−29%</b><div>Tiempo de compra</div></div>
+          <div class="metric"><b>99.9%</b><div>Uptime</div></div>
+          <div class="metric"><b>⟲</b><div>CI/CD + Testing</div></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="shot" aria-hidden="true">Apps QivoDigital — vista previa</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE DESTACADO (beneficio clave + mock) -->
+  <section class="container" style="margin-top:20px">
+    <article class="highlight">
+      <div>
+        <h2><span class="label">Lanza rápido, escala seguro</span></h2>
+        <p class="lead">Arquitectura modular, autenticación robusta (JWT/OAuth), almacenamiento seguro y observabilidad desde el día 1. Sin sorpresas al crecer.</p>
+        <div class="actions" style="margin-top:10px">
+          <a href="#brief" class="btn btn-primary">Cotiza tu app</a>
+          <a href="#stack" class="btn btn-ghost">Ver stack</a>
+        </div>
+      </div>
+      <div class="shot">UI/Flows — preview</div>
+    </article>
+  </section>
+
+  <!-- FEATURES (se respeta estructura y copy original) -->
+  <section class="container" id="features" style="margin-top:24px">
+    <h2>Lo que entregamos</h2>
+    <div class="qv-stack">
+      <article class="qv-card"><h3>⚡ Performance real</h3><p>Pipelines CI/CD, código eficiente y testing automatizado para que la app <b>no se caiga</b> y <b>vuele</b>.</p><span class="cta">Mejores prácticas <i>→</i></span></article>
+      <article class="qv-card"><h3>🔐 Seguridad</h3><p>Auth segura (tokens/JWT), manejo de sesiones, cifrado y políticas de permisos por rol.</p><span class="cta">Políticas de seguridad <i>→</i></span></article>
+      <article class="qv-card"><h3>🔌 Integraciones</h3><p>APIs, pagos, inventarios, chat, push, mapas y más. Con <b>reintentos</b>, <b>colas</b> y <b>trazabilidad</b>.</p><span class="cta">Arquitectura de integraciones <i>→</i></span></article>
+      <article class="qv-card"><h3>📈 Medición</h3><p>Uso, retención y conversión con eventos y embudos (GA4/Amplitude/Mixpanel). Alertas y decisiones por datos.</p><span class="cta">Métricas clave <i>→</i></span></article>
+    </div>
+  </section>
+
+  <!-- PROCESO (reduce fricción de compra) -->
+  <section class="container" style="margin-top:24px">
+    <h2>Proceso claro, entregables reales</h2>
+    <div class="process">
+      <div class="step"><b>1. Descubrimiento</b><br/>Objetivos, métricas y quick-wins.</div>
+      <div class="step"><b>2. Arquitectura</b><br/>Scope técnico, seguridad y roadmap.</div>
+      <div class="step"><b>3. MVP/Iteración</b><br/>Sprints quincenales con demo.</div>
+      <div class="step"><b>4. Lanzamiento</b><br/>Store setup, monitoreo y KPIs.</div>
+    </div>
+  </section>
+
+  <!-- STACK (señales técnicas) -->
+  <section class="container" id="stack" style="margin-top:24px">
+    <h2>Stack recomendado</h2>
+    <div class="stack">
+      <span class="chip">React Native</span>
+      <span class="chip">Flutter</span>
+      <span class="chip">Node.js / Nest</span>
+      <span class="chip">PostgreSQL</span>
+      <span class="chip">Firebase/FCM</span>
+      <span class="chip">Stripe/Wompi/Bold</span>
+      <span class="chip">S3/Cloud Storage</span>
+      <span class="chip">GA4 / Amplitude</span>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS (prueba social) -->
+  <section class="container" style="margin-top:24px">
+    <h2>Resultados que se notan</h2>
+    <div class="testi">
+      <div class="quote">“Pasamos de idea a app en 6 semanas con pagos y notificaciones. El onboarding quedó impecable.”<b>— Dirección de Producto</b></div>
+      <div class="quote">“El panel de métricas nos permitió decidir por datos y reducir 29% el tiempo de compra.”<b>— E-commerce Lead</b></div>
+      <div class="quote">“Soporte 24/7 y SLAs cumplidos. Cero dolores en la publicación y updates.”<b>— CTO</b></div>
+    </div>
+  </section>
+
+  <!-- CTA BANDA -->
+  <section class="container" style="margin-top:24px">
+    <div class="cta-band">
+      <h3>¿Listo para crear tu app que sí convierte?</h3>
+      <p>Te guiamos con métricas, seguridad y una ruta de crecimiento clara.</p>
+      <div class="actions center" style="margin-top:6px">
+        <a href="#brief" class="btn btn-ghost">Empezar ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM (COMPARTIDO) -->
+  <section class="container" id="brief" style="margin-top:10px">
+    <div
+      data-leadform-placeholder
+      data-title="Cuéntanos tu app 🚀"
+      data-interes="apps"
+      data-source="/servicios/apps/#brief"
+      data-msg="¿Qué problema resuelve la app? ¿Qué módulos e integraciones necesita?">
+    </div>
+    <small style="display:block;margin-top:8px;color:var(--muted)">Tiempo de respuesta: &lt; 24 h.</small>
+  </section>
+
+  <!-- FAQ breve (reduce objeciones) -->
+  <section class="container faq" style="margin:24px 0 56px">
+    <h2>Preguntas frecuentes</h2>
+    <details><summary>¿Cuánto tarda un MVP?</summary><p>Entre 4 y 8 semanas según alcance e integraciones.</p></details>
+    <details><summary>¿Trabajan con mi stack actual?</summary><p>Sí. Auditamos y nos integramos o refactorizamos por etapas.</p></details>
+    <details><summary>¿Cómo medimos el éxito?</summary><p>KPIs (retención, conversión, SLA) + dashboards y alertas.</p></details>
+    <details><summary>¿Quién es dueño del código?</summary><p>Tú. Repos, accesos y documentación en tus cuentas si prefieres.</p></details>
+  </section>
+
+  <!-- FOOTER compartido (INTACTO) -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("/components/footer.html").then(r=>r.text()).then(h=>document.getElementById("footer-placeholder").innerHTML=h);
+  </script>
+
+  <!-- == Scripts en el mismo orden que tenías == -->
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/toasts-core.js"></script>
+  <script src="/assets/js/toasts-init.js"></script>
+  <!-- Loader del formulario compartido -->
+  <script src="/assets/js/lead-form.js"></script>
+
+  <!-- Activador de toasts al cargar header (INTACTO) -->
+  <script>
+    document.addEventListener("qv-header-loaded", () => {
+      if (typeof toast !== "undefined") {
+        window.alert = (msg) => toast.ok("✅ Correcto", String(msg||""));
+        console.log("✅ Toasts ACTIVOS en apps ✅");
+      }
+    });
+  </script>
+
+</body>
+</html>

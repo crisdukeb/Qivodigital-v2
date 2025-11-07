@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Software a Medida & Sistemas Internos | QivoDigital</title>
+<meta name="description" content="Paneles, ERPs ligeros, SaaS y sistemas internos hechos a tu medida. Seguridad, roles, performance y escalabilidad."/>
+<link rel="canonical" href="https://qivodigital.com/servicios/software-medida/"/>
+<link rel="stylesheet" href="/assets/css/style.css"/></head><body>
+
+<div id="header-placeholder"></div>
+<script>fetch("/components/header.html").then(r=>r.text()).then(h=>document.getElementById("header-placeholder").innerHTML=h);</script>
+
+<section class="hero container" id="hero" style="padding-top:92px">
+  <div class="grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>Software a Medida</p>
+      <h1>Sistemas internos que mueven tu negocio.</h1>
+      <p class="lead">Procesos críticos, seguridad y datos en un solo lugar. Construimos justo lo que necesitas.</p>
+      <div class="actions">
+        <a href="#alcance" class="btn btn-primary">Agenda tu consultoría</a>
+        <a href="#stack" class="btn btn-ghost">Stack</a>
+      </div>
+      <div class="badges">
+        <span class="badge">SaaS</span><span class="badge">Paneles</span>
+        <span class="badge">Roles/Permisos</span><span class="badge">CI/CD</span>
+      </div>
+    </div>
+    <div class="hero-card"><p>Software QivoDigital — vista previa</p></div>
+  </div>
+</section>
+
+<section class="container" id="alcance" style="margin-top:32px">
+  <h2>Alcance típico</h2>
+  <div class="qv-stack">
+    <article class="qv-card"><h3>🏗️ Arquitectura</h3><p>Módulos, entidades, flujos, colas y jobs.</p></article>
+    <article class="qv-card"><h3>🔐 Seguridad</h3><p>Autenticación, roles, auditoría y cifrado.</p></article>
+    <article class="qv-card"><h3>📊 Datos</h3><p>Dashboards, ETL, reporting y alerts.</p></article>
+    <article class="qv-card"><h3>🧩 Integraciones</h3><p>Pagos, mensajería, logística y terceros.</p></article>
+  </div>
+</section>
+
+<section class="container" id="stack" style="margin-top:24px">
+  <form class="qv-form" data-form="software">
+    <h3>Tu sistema a medida</h3>
+    <div class="qv-grid">
+      <label>Nombre*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+      <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+      <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+      <label>Áreas críticas*<br>
+        <select name="interes" required>
+          <option value="">Selecciona…</option>
+          <option>Ventas</option><option>Operaciones</option><option>Finanzas</option><option>Otro</option>
+        </select>
+      </label>
+    </div>
+    <label>Necesidad (2–3 líneas)*<br>
+      <textarea required name="mensaje" rows="4" placeholder="¿Qué proceso debe resolver?"></textarea>
+    </label>
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </form>
+</section>
+
+<div id="footer-placeholder"></div>
+<script>fetch("/components/footer.html").then(r=>r.text()).then(h=>document.getElementById("footer-placeholder").innerHTML=h);</script>
+<script src="/assets/js/main.js"></script>
+</body></html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QivoDigital — Servicios</title>
+  <meta name="description" content="Todos los servicios de QivoDigital: automatización, ecommerce, integraciones, web/apps, IA y más.">
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+  <link rel="canonical" href="/servicios/"/>
+</head>
+<body>
+  <div id="qv-header-placeholder"></div>
+
+  <main class="container" style="margin-top:100px">
+    <h1>Servicios QivoDigital</h1>
+    <p class="lead">Tecnología a la medida para llevar tu operación a otro nivel.</p>
+
+    <div class="grid" style="margin-top:18px">
+      <a class="qv-card" href="/servicios/whatsapp/"><h3>📲 WhatsApp Marketing / API</h3><p>Campañas y flujos con métricas.</p></a>
+      <a class="qv-card" href="/servicios/automatizacion/"><h3>⚙️ Automatización</h3><p>Elimina tareas repetitivas.</p></a>
+      <a class="qv-card" href="/servicios/ecommerce/"><h3>🛒 Ecommerce</h3><p>Tiendas rápidas con pagos y logística.</p></a>
+      <a class="qv-card" href="/servicios/software-medida/"><h3>🧩 Software a Medida</h3><p>Sistemas exactos a tu operación.</p></a>
+      <a class="qv-card" href="/servicios/integraciones/"><h3>🔗 Integraciones / APIs</h3><p>Conecta todo tu stack.</p></a>
+      <a class="qv-card" href="/servicios/web-apps/"><h3>💻 Web</h3><p>SEO-first y mobile-first.</p></a>
+      <a class="qv-card" href="/servicios/apps/"><h3>📱 Apps</h3><p>Nativas e híbridas.</p></a>
+      <a class="qv-card" href="/servicios/chatbots/"><h3>🤖 Chatbots e IA</h3><p>Soporte y ventas con IA.</p></a>
+      <a class="qv-card" href="/servicios/crm/"><h3>📊 CRM a Medida</h3><p>Pipelines y automatización comercial.</p></a>
+    </div>
+  </main>
+
+  <div id="qv-footer-placeholder"></div>
+
+  <script>
+    fetch('/components/header.html').then(r=>r.text()).then(h=>document.getElementById('qv-header-placeholder').innerHTML=h);
+    fetch('/components/footer.html').then(r=>r.text()).then(f=>document.getElementById('qv-footer-placeholder').innerHTML=f);
+  </script>
+</body>
+</html>

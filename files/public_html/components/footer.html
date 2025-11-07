@@ -1,0 +1,76 @@
+<!-- QivoDigital — Footer PRO compacto con separador curvo e íconos -->
+<footer class="qvFootPro" role="contentinfo" aria-label="Pie de página QivoDigital">
+  <style>
+    .qvFootPro{position:relative;font-family:inherit;color:#0b1c2f;overflow:hidden}
+    .qvFootPro__cut{position:absolute;left:0;right:0;top:-1px;height:80px;z-index:0;pointer-events:none;
+      background:radial-gradient(140% 120% at 50% 120%, #a8c6ff66 0, transparent 55%),linear-gradient(180deg, transparent 0, #f6f9ff 90%);
+      mask:radial-gradient(120% 120% at 50% -10%, #000 55%, transparent 56%)}
+    .qvFootPro__bg{position:absolute;inset:0;z-index:-1;background:
+      radial-gradient(90% 60% at 85% -10%, #cfe3ff 0, transparent 60%),
+      radial-gradient(80% 60% at 10% -10%, #b9f0ff 0, transparent 58%),
+      linear-gradient(180deg,#f6f9ff 0%, #edf3ff 60%, #e8f0ff 100%)}
+    .qvFootPro .container{max-width:1180px;margin:0 auto;padding:0 20px}
+    .qvFootPro__panel{margin:22px auto 12px;padding:18px 20px;border:1px solid #cdd9ff;border-radius:20px;background:#ffffffe6;box-shadow:0 14px 40px rgba(20,40,110,.16), inset 0 1px 0 #fff}
+    .qvFootPro__grid{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:start}
+    @media (max-width:900px){.qvFootPro__grid{grid-template-columns:1fr}}
+    .qvBrand{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+    .qvBrand__dot{width:12px;height:12px;border-radius:50%;background:radial-gradient(45% 45% at 35% 35%, #2a67f6 0, #00d4ff 100%);box-shadow:0 0 10px #2a67f644}
+    .qvBrand__name{font-weight:900}.qvBrand__tld{color:#2a67f6}.qvLead{color:#22324a;opacity:.9;margin-bottom:10px}
+    .btnCTA{display:inline-flex;align-items:center;gap:10px;font-weight:900;text-decoration:none;padding:12px 18px;border-radius:999px;border:1px solid transparent;color:#0b1c2f;background:linear-gradient(90deg,#18d6b8,#61a0ff 55%,#8a74ff);box-shadow:0 10px 24px rgba(70,120,255,.25);transition:transform .14s}
+    .btnCTA:hover{transform:translateY(-2px)} .btnCTA svg{width:18px;height:18px}
+    .qvList{display:grid;grid-template-columns:1fr 1fr;gap:10px} @media (max-width:520px){.qvList{grid-template-columns:1fr}}
+    .qvItem{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:#fff;border:1px solid #d7e3ff;text-decoration:none;color:#0d2444;font-weight:800;transition:transform .12s, box-shadow .12s}
+    .qvItem:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(20,50,140,.14)} .qvItem svg{width:16px;height:16px;flex:0 0 auto;filter:drop-shadow(0 0 4px #6aa2ff55)}
+    .qvBottom{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;padding-top:10px;border-top:1px solid #d5e0ff;color:#22324a}
+    .qvBottom a{color:#2b4a8a;font-weight:800;text-decoration:none} .qvBottom a:hover{text-decoration:underline}
+    .qvLux + .hero, section, #form-hero, #form-servicios{scroll-margin-top:110px}
+  </style>
+
+  <div class="qvFootPro__bg"></div>
+  <div class="qvFootPro__cut"></div>
+
+  <div class="container">
+    <div class="qvFootPro__panel">
+      <div class="qvFootPro__grid">
+        <div>
+          <div class="qvBrand">
+            <span class="qvBrand__dot" aria-hidden="true"></span>
+            <strong class="qvBrand__name">QivoDigital<span class="qvBrand__tld">.com</span></strong>
+          </div>
+          <p class="qvLead">Software, automatizaciones e IA para un negocio ágil y preciso.</p>
+          <a class="btnCTA" href="/#form-hero">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 3v3M17 3v3M3.5 10.5h17M6 21h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2Z" stroke="#0b1c2f" stroke-width="1.6" stroke-linecap="round"/></svg>
+            Agenda tu consultoría
+          </a>
+        </div>
+
+        <!-- ⚠️ Links ABSOLUTOS a secciones del HOME: funcionan desde cualquier página -->
+        <nav aria-label="Navegación del sitio" class="qvList">
+          <a class="qvItem" href="/#hero">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 12L12 4l9 8" stroke="#2a67f6" stroke-width="1.8" stroke-linecap="round"/><path d="M5 10v9h14v-9" stroke="#00d4ff" stroke-width="1.4"/></svg>
+            Inicio
+          </a>
+          <a class="qvItem" href="/#servicios">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="6" cy="12" r="3" stroke="#2a67f6" stroke-width="1.8"/><circle cx="18" cy="7" r="3" stroke="#00d4ff" stroke-width="1.8"/><circle cx="18" cy="17" r="3" stroke="#8a74ff" stroke-width="1.8"/></svg>
+            Servicios
+          </a>
+          <a class="qvItem" href="/#form-hero">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h12M4 17h10" stroke="#2a67f6" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Registro
+          </a>
+          <a class="qvItem" href="/#form-servicios">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.2-4.2" stroke="#8a74ff" stroke-width="1.8" stroke-linecap="round"/><circle cx="11" cy="11" r="6" stroke="#00d4ff" stroke-width="1.8"/></svg>
+            Contacto
+          </a>
+        </nav>
+      </div>
+
+      <div class="qvBottom">
+        <small>© 2025 QivoDigital — Tecnología que transforma negocios.</small>
+        <div class="qvLegal">
+          <a href="/#terminos">Términos</a><span> · </span><a href="/#privacidad">Privacidad</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

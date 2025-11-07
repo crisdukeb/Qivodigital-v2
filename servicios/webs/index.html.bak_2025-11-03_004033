@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diseño y Desarrollo Web Corporativo | QivoDigital</title>
+  <meta name="description" content="Sitios y plataformas web rápidas, seguras y listas para vender. SEO, UX y escalabilidad de nivel agencia." />
+  <link rel="canonical" href="https://qivodigital.com/servicios/webs/" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+  <script>fetch("/components/header.html").then(r=>r.text()).then(h=>document.getElementById("header-placeholder").innerHTML=h);</script>
+
+  <section class="hero container" id="hero" style="padding-top:92px">
+    <div class="grid">
+      <div>
+        <p class="kicker"><span class="dot"></span>Web Performance + SEO</p>
+        <h1>Webs que posicionan y convierten.</h1>
+        <p class="lead">Diseño a medida, código limpio, velocidad y SEO técnico. Preparadas para crecer.</p>
+        <div class="actions">
+          <a href="#brief" class="btn btn-primary">Agenda tu consultoría</a>
+          <a href="#stack" class="btn btn-ghost">Nuestro stack</a>
+        </div>
+        <div class="badges">
+          <span class="badge">Core Web Vitals</span>
+          <span class="badge">SEO Técnico</span>
+          <span class="badge">UX/UI</span>
+          <span class="badge">Integraciones</span>
+        </div>
+      </div>
+      <div class="hero-card"><p>Webs QivoDigital — vista previa</p></div>
+    </div>
+  </section>
+
+  <section class="container" id="stack" style="margin-top:32px">
+    <h2>Nuestro stack</h2>
+    <div class="qv-stack">
+      <article class="qv-card"><h3>⚙️ Frontend</h3><p>HTML/CSS/JS optimizado. SSR/SPA cuando conviene.</p></article>
+      <article class="qv-card"><h3>🛡️ Seguridad</h3><p>HTTPS, CSP, CORS, headers y auditorías.</p></article>
+      <article class="qv-card"><h3>🚀 Deploy</h3><p>CI/CD, versiones, staging y monitoreo.</p></article>
+      <article class="qv-card"><h3>�� SEO</h3><p>Arquitectura, schema, metas, sitemap y velocidad.</p></article>
+    </div>
+  </section>
+
+  <section class="container" id="brief" style="margin-top:24px">
+    <form class="qv-form" data-form="webs">
+      <h3>¿Qué web necesitas?</h3>
+      <div class="qv-grid">
+        <label>Nombre*<br><input required name="nombre" placeholder="Tu nombre" /></label>
+        <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa" /></label>
+        <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com" /></label>
+        <label>Tipo de proyecto*<br>
+          <select name="tipo" required>
+            <option value="">Selecciona…</option>
+            <option>Landing / Corporativo</option>
+            <option>Portal / Plataforma</option>
+            <option>Intranet / Extranet</option>
+          </select>
+        </label>
+      </div>
+      <label>Objetivo clave (2–3 líneas)*<br>
+        <textarea required name="mensaje" rows="4" placeholder="¿Qué debe lograr tu sitio?"></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script>fetch("/components/footer.html").then(r=>r.text()).then(h=>document.getElementById("footer-placeholder").innerHTML=h);</script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

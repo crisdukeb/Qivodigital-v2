@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QivoDigital — Tecnología que transforma negocios</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+  <!-- HEADER COMPARTIDO -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("components/header.html")
+      .then(r=>r.text())
+      .then(h=>document.getElementById("header-placeholder").innerHTML=h);
+  </script>
+
+  <!-- HERO -->
+  <section class="hero container" id="hero">
+    <div class="grid">
+      <div>
+        <p class="kicker"><span class="dot"></span>Transformación Digital</p>
+        <h1>Tu empresa preparada para el futuro.</h1>
+        <p class="lead">
+          Software a medida · Automatización inteligente · IA que impulsa resultados operativos.<br/>
+          En QivoDigital diseñamos y construimos la tecnología que tus competidores aún no ven venir.
+        </p>
+        <div class="actions">
+          <a href="#form-hero" class="btn btn-primary">Agenda tu consultoría estratégica</a>
+          <a href="#form-hero" class="btn btn-ghost">Solicita análisis técnico</a>
+        </div>
+        <div class="badges">
+          <span class="badge">Sistemas internos</span>
+          <span class="badge">Plataformas web</span>
+          <span class="badge">Automatización con IA</span>
+          <span class="badge">Apps móviles</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p>Vista previa — ecosistema QivoDigital</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM 1 (primer fold) -->
+  <section class="container" id="form-hero" style="margin-top:24px">
+    <form class="qv-form" data-form="hero">
+      <h3>Quiero automatizar mi empresa</h3>
+      <div class="qv-grid">
+        <label>Nombre completo*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+        <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+        <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+        <label>¿En qué tipo de sistema estás interesado?<br>
+<select name="interes" id="interes" required>
+  <option value="" selected>Selecciona…</option>
+  <option value="whatsapp">WhatsApp & Chatbots</option>
+  <option value="automatizacion">Automatización de procesos</option>
+  <option value="ecommerce">E-commerce</option>
+  <option value="software-medida">Software a medida</option>
+  <option value="integraciones">Integraciones</option>
+  <option value="web-apps">Web-Apps</option>
+  <option value="apps">Apps móviles</option>
+  <option value="crm">CRM</option>
+  <option value="webs">Webs</option>
+  <option value="otros">Otros</option>
+</select>
+        </label>
+      </div>
+      <small>Nosotros te contactamos en menos de 24h.</small>
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- 01 — Problema -->
+  <section class="container" id="problema" style="margin-top:40px">
+    <h2>¿Por qué ya no basta con “una web”?</h2>
+    <ul class="qv-list">
+      <li>Procesos operativos que tardan días</li>
+      <li>Sistemas desconectados que detienen tu ritmo de crecimiento</li>
+      <li>Falta de visibilidad real sobre tus datos y operaciones</li>
+      <li>Equipos cargados de tareas manuales y repetitivas</li>
+      <li>Clientes que no se fidelizan por experiencias mediocres</li>
+    </ul>
+    <p class="lead">
+      Necesitas tecnología <b>viva</b>: webs, apps, sistemas que se adaptan, automatizaciones que liberan, datos que guían.
+      No solo una página bonita… sino una <b>infraestructura digital lista para funcionar</b>.
+    </p>
+  </section>
+
+  <!-- 02 — Servicios Premium -->
+  <section class="container" id="servicios" style="margin-top:40px">
+    <h2>Servicios Premium</h2>
+    <p>Diseñados para organizaciones que exigen resultados técnicos de alto nivel.</p>
+
+    <article class="qv-card">
+      <h3>🏗️ Desarrollo de Software a Medida</h3>
+      <p>Construimos sistemas internos, paneles de control avanzados, flujos críticos automatizados, MVPs para startups, SaaS escalables con suscripción y facturación integrada. Integración total: pagos, mensajería, logística. Tecnologías: Node.js · PHP/Laravel · Express · MySQL · MongoDB. Seguridad de nivel empresarial, roles sofisticados, escalabilidad ilimitada.</p>
+    </article>
+
+    <article class="qv-card">
+      <h3>🌐 Desarrollo Web Corporativo & Aplicaciones</h3>
+      <p>Webs premium 100% personalizadas: código puro, sin plantillas. Totalmente administrables, optimizadas para velocidad, SEO y experiencia móvil. PWA, intranets, plataformas de clientes. Apps móviles nativas o híbridas (React Native / Flutter) integradas con sistemas: geolocalización, cámara, pagos, notificaciones push, chat en vivo. UX/UI de agencia top.</p>
+    </article>
+
+    <article class="qv-card">
+      <h3>🤖 Automatización & Integraciones Inteligentes</h3>
+      <p>Creamos CRM adaptados, bots autónomos, mensajería multicanal (WhatsApp, Telegram, email, SMS), API/REST & Webhooks para sincronizar tus sistemas. Paneles de monitoreo en tiempo real, reportes visuales que traducen datos en acciones estratégicas. Automatizamos lo que bloquea tu crecimiento.</p>
+    </article>
+
+    <article class="qv-card">
+      <h3>🖥️ Infraestructura & Soporte Técnico de Alto Nivel</h3>
+      <p>Configuramos servidores VPS o en la nube (Hostinger, AWS, DigitalOcean), seguridad avanzada, backups automáticos, SSL, CI/CD continuo. Migramos sistemas legacy, mantenemos operación sin interrupciones y escalamos para crecimiento futuro.</p>
+    </article>
+
+    <article class="qv-card">
+      <h3>⚙️ Bases de Datos & Analítica Avanzada</h3>
+      <p>Diseño y administración de bases de datos relacionales o no-relacionales; dashboards interactivos (ventas, usuarios, métricas). Integración con Data Studio, Power BI, Metabase. Migraciones y sincronización de datos masivos.</p>
+    </article>
+
+    <article class="qv-card">
+      <h3>🔐 Seguridad & Control Total</h3>
+      <p>Auditorías, encriptación, control de accesos y sesiones, tokens JWT, monitoreo de logs, alertas 24/7. Pruebas de estrés, rendimiento y vulnerabilidades. Implementación de 2FA, HTTPS, CSP, CORS.</p>
+    </article>
+
+    <article class="qv-card">
+      <h3>🚀 Innovación & Desarrollo Experimental</h3>
+      <p>IA/ML (chatbots generativos, análisis predictivo, reconocimiento). IoT, arquitectura modular para startups/SaaS, servicios cloud (Firebase, Supabase, AWS Lambda).</p>
+    </article>
+  </section>
+
+  <!-- FORM 2 (al final de servicios) -->
+  <section class="container" id="form-servicios" style="margin-top:24px">
+    <form class="qv-form" data-form="servicios">
+      <h3>Solicitar propuesta técnica</h3>
+      <div class="qv-grid">
+        <label>Nombre completo*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+        <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+        <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+        <label>¿Qué servicio te interesa?<br>
+          <select name="servicio" required>
+            <option value="">Selecciona…</option>
+            <option>Software a Medida</option>
+            <option>Web & App</option>
+            <option>Automatización</option>
+            <option>Infraestructura</option>
+          </select>
+        </label>
+      </div>
+      <label>¿Cuál es tu principal reto tecnológico?*<br>
+        <textarea required name="mensaje" rows="4" placeholder="Cuéntanos tu caso en 3–5 líneas"></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+    </form>
+  </section>
+
+  <!-- 03 — QivoSend (sección informativa, no principal) -->
+  <section class="container" id="qivosend" style="margin-top:40px">
+    <h2>Nuestra herramienta diferenciadora: QivoSend</h2>
+    <p><b>QivoSend</b> — Plataforma SaaS desarrollada por QivoDigital que potencia tu ecosistema digital:</p>
+    <ul class="qv-list">
+      <li>Envíos masivos de WhatsApp con métricas avanzadas</li>
+      <li>Chatbots con IA integrados en servicio al cliente</li>
+      <li>CRM completo para seguimiento, pipelines y suscripción</li>
+      <li>Facturación automática integrada con tus sistemas</li>
+      <li>Integración total con tu web, tu app y tus procesos internos</li>
+    </ul>
+    <p>En producción y transformando operaciones. 👉 QivoSend + nuestros servicios = infraestructura lista para operar.</p>
+    <p><a class="btn btn-ghost" href="https://qivosend.com" target="_blank" rel="noopener">Descubre QivoSend</a></p>
+  </section>
+
+  <!-- 04 — Casos de éxito -->
+  <section class="container" id="casos" style="margin-top:40px">
+    <h2>Casos de Éxito de Clase Mundial</h2>
+    <ul class="qv-list">
+      <li><b>QivoSend</b> – Implementación SaaS en 300+ empresas; automatización de leads y datos +450% en 90 días.</li>
+      <li><b>Temptation Shop Panel</b> – Sistema interno que redujo 1 minuto por pedido y aumentó eficiencia +40%.</li>
+      <li><b>Vehitron System</b> – Control de stock y precios por ciudad; pérdidas reducidas 27%.</li>
+      <li><b>FirmaLogix</b> – Migración de 14 sistemas legados en 6 semanas, sin detener ventas.</li>
+      <li><b>AnalyticsPredict</b> – IA que anticipó fallos operativos, recortando 25% de costos anuales.</li>
+      <li><b>RetailPlus App & CRM</b> – App + panel + automatización; 65% de tareas manuales liberadas.</li>
+    </ul>
+  </section>
+
+  <!-- 05 — Testimonios -->
+  <section class="container" id="testimonios" style="margin-top:40px">
+    <h2>Testimonios Premium</h2>
+    <div class="qv-stack">
+      <blockquote>“Gracias a QivoDigital, nuestro sistema interno funciona sin supervisión. Ahora los directivos tienen visibilidad total y control real.” — <b>Ana Gómez</b>, CEO RetailCorp</blockquote>
+      <blockquote>“La migración tecnológica fue impecable. En 30 días ya teníamos un sistema nuevo en marcha, equipos liberados, datos en tiempo real.” — <b>Carlos Martínez</b>, COO LogísticaPlus</blockquote>
+      <blockquote>“Elegimos QivoDigital porque no queríamos una agencia más; queríamos socios tecnológicos. Hoy somos referencia en nuestra industria.” — <b>María Pérez</b>, Dir. Tecnología FintechGlobal</blockquote>
+      <blockquote>“Implementamos su CRM y automatizamos el 87% de nuestros chats de soporte sin contratar personal extra.” — <b>Laura Fernández</b>, Gerente Atención al Cliente SoftServices</blockquote>
+      <blockquote>“El dashboard que diseñaron nos brinda visibilidad global de nuestra operación, con datos en vivo y alertas inteligentes.” — <b>Miguel Álvarez</b>, CEO GlobalLogistics</blockquote>
+      <blockquote>“La infraestructura que montaron nos permitió escalar sin interrupciones y con total seguridad.” — <b>Javier Rodríguez</b>, Director Operaciones IndustriaMetal</blockquote>
+      <blockquote>“Su IA liberó el 65% de las tareas operativas repetitivas; ahora enfocamos al equipo en estrategia.” — <b>Sofía Ramírez</b>, Directora Operaciones EduTech</blockquote>
+    </div>
+  </section>
+
+  <!-- 06 — Eficiencia & Tecnología -->
+  <section class="container" id="eficiencia" style="margin-top:40px">
+    <h2>Eficiencia y Tecnología como Estándar</h2>
+    <ul class="qv-list">
+      <li>Sistemas activos 24/7, sin interrupciones</li>
+      <li>Integraciones completas implementadas en 5–7 semanas</li>
+      <li>Tecnología adaptada a tu crecimiento, no a plantillas pre-armadas</li>
+      <li>Visibilidad total de procesos, datos y resultados</li>
+      <li>Equipos liberados de tareas repetitivas, enfocados en innovación</li>
+    </ul>
+  </section>
+
+  <!-- CTA final -->
+  <section class="container" id="cta-final" style="margin:40px auto">
+    <h2>Tu empresa merece tecnología que funcione como la necesitas</h2>
+    <p>Entregamos sistemas, webs, apps y automatizaciones a la medida para que tu operación sea ágil, escalable y precisa.</p>
+    <div class="actions">
+      <a href="#contacto" class="btn btn-primary">Iniciar diagnóstico técnico</a>
+      <a href="https://wa.me/573226653305" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp — 322 665 3305</a>
+    </div>
+  </section>
+
+  <!-- FOOTER COMPARTIDO -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("components/footer.html")
+      .then(r=>r.text())
+      .then(h=>document.getElementById("footer-placeholder").innerHTML=h);
+  </script>
+
+  <script src="assets/js/main.js"></script>
+<!-- Footer Componente -->
+<div id="footer-app"><?php include "components/footer.html"; ?></div>
+<script src="assets/js/anim-enhance.js"></script>
+</body>
+</html>

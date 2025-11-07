@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>QivoDigital — Portafolio & Servicios</title>
+  <meta name="description" content="Portafolio de casos y catálogo de servicios de QivoDigital. Integraciones, automatización, e-commerce, web/apps, IA y más."/>
+  <link rel="canonical" href="/servicios/"/>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+  <style>
+    /* ======= Ajustes locales (SaaS corporativo) ======= */
+    :root{
+      --qv-bg: #0b1220;
+      --qv-card:#0f182a;
+      --qv-stroke: rgba(255,255,255,.08);
+      --qv-soft: rgba(255,255,255,.06);
+      --qv-grad: linear-gradient(90deg,#00e0c6 0%,#7a7bff 55%,#b06cff 100%);
+      --qv-chip-bg: rgba(255,255,255,.08);
+      --qv-chip-fg: #e7efff;
+    }
+    body{background:#07101f}
+    .qv-wrap{max-width:1100px;margin:0 auto;padding:88px 16px 40px}
+    .hero{padding-top:12px}
+    .hero h1{
+      font-size:clamp(28px,6vw,44px);line-height:1.1;margin:8px 0 6px;
+      background:var(--qv-grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+      letter-spacing:.2px;font-weight:800
+    }
+    .hero p.lead{opacity:.9;max-width:760px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .actions .btn{min-width:190px;justify-content:center}
+    .btn-primary{background:var(--qv-grad);color:#07101f;border:0}
+    .btn-ghost{border:1px solid var(--qv-stroke);background:transparent}
+    .section{margin-top:36px}
+    .section h2{font-size:clamp(22px,4.6vw,32px);margin:0 0 14px}
+    .muted{opacity:.75}
+
+    /* ======= CASOS (Layout 1 compacto horizontal) ======= */
+    .cases{display:grid;gap:14px}
+    .case-card{
+      display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;
+      background:var(--qv-card);border:1px solid var(--qv-stroke);
+      border-radius:18px;padding:12px 12px 14px;box-shadow:0 6px 24px rgba(0,0,0,.25)
+    }
+    .case-img{
+      width:120px;height:88px;border-radius:12px;object-fit:cover;border:1px solid var(--qv-stroke)
+    }
+    .case-body h3{margin:0 0 4px;font-size:18px}
+    .case-sub{font-size:13px;opacity:.8;margin-bottom:6px}
+    .kpis{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .kpi{background:var(--qv-chip-bg);color:var(--qv-chip-fg);padding:6px 10px;border-radius:999px;font-size:12px;border:1px solid var(--qv-stroke)}
+    .case-cta{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+
+    /* ======= SERVICIOS (tarjeta grande con imagen) ======= */
+    .services{display:grid;gap:16px}
+    .svc-card{
+      background:var(--qv-card);border:1px solid var(--qv-stroke);
+      border-radius:22px;overflow:hidden
+    }
+    .svc-media{position:relative;height:180px}
+    .svc-media img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05) contrast(1.05)}
+    .svc-tag{
+      position:absolute;left:14px;bottom:12px;background:rgba(6,10,20,.6);
+      border:1px solid var(--qv-stroke);color:#fff;font-weight:700;padding:6px 10px;border-radius:999px;font-size:12px;backdrop-filter:blur(6px)
+    }
+    .svc-body{padding:14px 14px 18px}
+    .svc-body h3{margin:0 0 8px;font-size:20px}
+    .svc-body p{margin:0 0 10px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{background:var(--qv-chip-bg);color:var(--qv-chip-fg);padding:6px 10px;border-radius:999px;font-size:12px;border:1px solid var(--qv-stroke)}
+    .svc-actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+    .svc-actions .btn{min-width:150px}
+
+    /* ======= FAQ ======= */
+    details.qv{background:var(--qv-card);border:1px solid var(--qv-stroke);border-radius:16px;padding:10px 12px}
+    details.qv+details.qv{margin-top:10px}
+    details.qv summary{cursor:pointer;font-weight:600}
+
+    /* ======= Responsive ======= */
+    @media(min-width:820px){
+      .services{grid-template-columns:1fr 1fr}
+      .cases{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main class="qv-wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="kicker">QivoDigital</p>
+      <h1>Portafolio y catálogo de servicios</h1>
+      <p class="lead">Primero miras casos reales y sus resultados. Luego eliges cómo aplicamos eso a tu operación.</p>
+      <div class="actions">
+        <a href="#casos" class="btn btn-primary">Ver casos</a>
+        <a href="#catalogo" class="btn btn-ghost">Catálogo de servicios</a>
+        <a href="#brief" class="btn btn-ghost">Agenda diagnóstico</a>
+      </div>
+    </section>
+
+    <!-- CASOS (compacto, diferente a servicios) -->
+    <section id="casos" class="section">
+      <h2>Casos recientes</h2>
+      <div class="cases">
+        <!-- Caso 1 -->
+        <article class="case-card">
+          <img class="case-img" src="https://picsum.photos/seed/retail/640/420" alt="Retail integraciones"/>
+          <div class="case-body">
+            <h3>Retail — Ecommerce + Integraciones</h3>
+            <div class="case-sub">Checkout optimizado · logística conectada · feed para Ads</div>
+            <p class="muted">Catálogo multi-bodega, tarifas dinámicas y recuperación de carrito por WhatsApp. Conversión en tiempo real con dashboards.</p>
+            <div class="kpis">
+              <span class="kpi">+24% conversión</span>
+              <span class="kpi">−29% tiempo de compra</span>
+              <span class="kpi">+36% cierre por WA</span>
+            </div>
+            <div class="case-cta">
+              <a href="#brief" class="btn btn-ghost">Pedir diagnóstico</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Caso 2 -->
+        <article class="case-card">
+          <img class="case-img" src="https://picsum.photos/seed/edtech/640/420" alt="EdTech webapp"/>
+          <div class="case-body">
+            <h3>EdTech — WebApp + Pagos</h3>
+            <div class="case-sub">Cohortes · recordatorios WA · métricas</div>
+            <p class="muted">Campus con pasarela, control de asistencia y dashboards de retención. Automatizaciones de recaudo y certificados.</p>
+            <div class="kpis">
+              <span class="kpi">+31% retención</span>
+              <span class="kpi">−42% fallos pago</span>
+              <span class="kpi">+19% ARPU</span>
+            </div>
+            <div class="case-cta">
+              <a href="#brief" class="btn btn-ghost">Ver cómo lo hicimos</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Caso 3 -->
+        <article class="case-card">
+          <img class="case-img" src="https://picsum.photos/seed/health/640/420" alt="Salud CRM"/>
+          <div class="case-body">
+            <h3>Salud — CRM + Chatbot</h3>
+            <div class="case-sub">Agendamiento · confirmaciones · indicadores</div>
+            <p class="muted">Pre-triaje por WhatsApp, integración con agenda y reglas de no-show. Reportes de capacidad y SLA.</p>
+            <div class="kpis">
+              <span class="kpi">−38% ausencias</span>
+              <span class="kpi">−40% tiempos respuesta</span>
+              <span class="kpi">+22% CSAT</span>
+            </div>
+            <div class="case-cta">
+              <a href="#brief" class="btn btn-ghost">Solicitar caso completo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Caso 4 -->
+        <article class="case-card">
+          <img class="case-img" src="https://picsum.photos/seed/logistics/640/420" alt="Logística integraciones"/>
+          <div class="case-body">
+            <h3>Logística — Integraciones + Tracking</h3>
+            <div class="case-sub">Guías · tarifas · tracking</div>
+            <p class="muted">Sincronización con transportadoras, cálculo de tarifas y tracking unificado. Webhooks resilientes con reintentos.</p>
+            <div class="kpis">
+              <span class="kpi">+4.2× despachos</span>
+              <span class="kpi">−25% incidencias</span>
+              <span class="kpi">99.9% uptime</span>
+            </div>
+            <div class="case-cta">
+              <a href="#brief" class="btn btn-ghost">Hablemos</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICIOS (catálogo con imagen grande) -->
+    <section id="catalogo" class="section">
+      <h2>Catálogo de servicios</h2>
+      <div class="services">
+
+        <!-- WhatsApp -->
+        <article class="svc-card">
+          <div class="svc-media">
+            <img src="https://picsum.photos/seed/whatsapp/1200/680" alt="WhatsApp y API"/>
+            <span class="svc-tag">WhatsApp</span>
+          </div>
+          <div class="svc-body">
+            <h3>WhatsApp Marketing / API</h3>
+            <p>Campañas, chatbots, plantillas y medición. Integramos CRM, pagos y paneles para cerrar más rápido.</p>
+            <div class="chips">
+              <span class="chip">Chatbots</span><span class="chip">Plantillas</span><span class="chip">KPIs</span>
+            </div>
+            <div class="svc-actions">
+              <a class="btn btn-primary" href="/servicios/whatsapp/">Ver servicio</a>
+              <a class="btn btn-ghost" href="#brief">Cotizar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Automatización -->
+        <article class="svc-card">
+          <div class="svc-media">
+            <img src="https://picsum.photos/seed/automation/1200/680" alt="Automatización de procesos"/>
+            <span class="svc-tag">Automatización</span>
+          </div>
+          <div class="svc-body">
+            <h3>Automatización de procesos</h3>
+            <p>Orquestamos procesos entre sistemas, eliminamos tareas repetitivas y activamos reportes automáticos.</p>
+            <div class="chips">
+              <span class="chip">ETL</span><span class="chip">Webhooks</span><span class="chip">Alertas</span>
+            </div>
+            <div class="svc-actions">
+              <a class="btn btn-primary" href="/servicios/automatizacion/">Ver servicio</a>
+              <a class="btn btn-ghost" href="#brief">Cotizar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ecommerce -->
+        <article class="svc-card">
+          <div class="svc-media">
+            <img src="https://picsum.photos/seed/ecommerce/1200/680" alt="Ecommerce"/>
+            <span class="svc-tag">Ecommerce</span>
+          </div>
+          <div class="svc-body">
+            <h3>Ecommerce</h3>
+            <p>Tiendas rápidas con checkout optimizado, logística y catálogos conectados. SEO técnico y performance.</p>
+            <div class="chips">
+              <span class="chip">Checkout</span><span class="chip">Logística</span><span class="chip">SEO</span>
+            </div>
+            <div class="svc-actions">
+              <a class="btn btn-primary" href="/servicios/ecommerce/">Ver servicio</a>
+              <a class="btn btn-ghost" href="#brief">Cotizar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Software a medida -->
+        <article class="svc-card">
+          <div class="svc-media">
+            <img src="https://picsum.photos/seed/customsw/1200/680" alt="Software a medida"/>
+            <span class="svc-tag">Software</span>
+          </div>
+          <div class="svc-body">
+            <h3>Software a Medida</h3>
+            <p>Sistemas exactos a tu operación: roles, permisos, flujos, facturación y auditoría. Escalable.</p>
+            <div class="chips">
+              <span class="chip">RBAC</span><span class="chip">Facturación</span><span class="chip">Auditoría</span>
+            </div>
+            <div class="svc-actions">
+              <a class="btn btn-primary" href="/servicios/software-medida/">Ver servicio</a>
+              <a class="btn btn-ghost" href="#brief">Cotizar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Integraciones -->
+        <article class="svc-card">
+          <div class="svc-media">
+            <img src="https://picsum.photos/seed/integrations/1200/680" alt="Integraciones"/>
+            <span class="svc-tag">APIs</span>
+          </div>
+          <div class="svc-body">
+            <h3>Integraciones / APIs</h3>
+            <p>Conectamos tu stack (pagos, logística, ERPs, BI). Webhooks, colas y tolerancia a fallos.</p>
+            <div class="chips">
+              <span class="chip">REST/GraphQL</span><span class="chip">Colas</span><span class="chip">Observabilidad</span>
+            </div>
+            <div class="svc-actions">
+              <a class="btn btn-primary" href="/servicios/integraciones/">Ver servicio</a>
+              <a class="btn btn-ghost" href="#brief">Cotizar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Web/Apps -->
+        <article class="svc-card">
+          <div class="svc-media">
+            <img src="https://picsum.photos/seed/webapps/1200/680" alt="Web y Web-Apps"/>
+            <span class="svc-tag">Web/Apps</span>
+          </div>
+          <div class="svc-body">
+            <h3>Web & Web-Apps</h3>
+            <p>Webs corporativas, paneles internos y PWAs. Velocidad, accesibilidad y SEO como estándar.</p>
+            <div class="chips">
+              <span class="chip">Core Web Vitals</span><span class="chip">Accesibilidad</span><span class="chip">SEO</span>
+            </div>
+            <div class="svc-actions">
+              <a class="btn btn-primary" href="/servicios/web-apps/">Ver servicio</a>
+              <a class="btn btn-ghost" href="#brief">Cotizar</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <h2>Preguntas frecuentes</h2>
+      <details class="qv"><summary>¿Cómo medimos el éxito?</summary><p>Definimos KPIs desde el arranque (SLA, conversión, tiempos de ciclo, tickets). Dashboards y alertas para decisiones basadas en datos.</p></details>
+      <details class="qv"><summary>¿Pueden trabajar sobre mi stack actual?</summary><p>Sí. Auditamos tu stack y planteamos integraciones o refactor progresivo sin detener operación.</p></details>
+      <details class="qv"><summary>¿Quién conserva el código y la data?</summary><p>Tú. Entregamos repos, documentación y accesos. La infraestructura puede quedar en tus cuentas.</p></details>
+      <details class="qv"><summary>¿Qué cubren en seguridad?</summary><p>Control de acceso, cifrado en tránsito, auditoría, backups y segmentación de entornos con monitoreo 24/7.</p></details>
+      <details class="qv"><summary>¿Tiempo de entrega?</summary><p>Metodología ágil con hitos quincenales y entregables incrementales para time-to-value corto.</p></details>
+    </section>
+
+    <!-- FORM -->
+    <section id="brief" class="section">
+      <h2>¿Listo para empezar?</h2>
+      <p class="muted">Agenda un diagnóstico técnico. Te proponemos la mejor ruta para tu caso.</p>
+      <form class="qv-form" data-form="servicios">
+        <div class="qv-grid">
+          <label>Nombre completo*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+          <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+          <label>Interés*<br>
+            <select name="interes" required>
+              <option value="">Selecciona…</option>
+              <option value="whatsapp">WhatsApp & Chatbots</option>
+              <option value="automatizacion">Automatización</option>
+              <option value="ecommerce">E-commerce</option>
+              <option value="software-medida">Software a medida</option>
+              <option value="integraciones">Integraciones</option>
+              <option value="web-apps">Web & Web-Apps</option>
+              <option value="apps">Apps móviles</option>
+              <option value="chatbots">Chatbots e IA</option>
+              <option value="crm">CRM</option>
+              <option value="otros">Otros</option>
+            </select>
+          </label>
+        </div>
+        <label>Describe tu reto tecnológico (3–5 líneas)<br>
+          <textarea name="mensaje" rows="3"></textarea>
+        </label>
+        <input type="hidden" name="brand" value="qivodigital"/>
+        <input type="hidden" name="source_page" value="/servicios/"/>
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">Solicitar diagnóstico</button>
+        </div>
+        <small class="muted">Tiempo de respuesta &lt; 24 h.</small>
+      </form>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Header/Footer
+    fetch('/components/header.html').then(r=>r.text()).then(h=>document.getElementById('header-placeholder').innerHTML=h);
+    fetch('/components/footer.html').then(r=>r.text()).then(f=>document.getElementById('footer-placeholder').innerHTML=f);
+
+    // Envío de formulario
+    document.addEventListener('submit', async (e) => {
+      const form = e.target.closest('form.qv-form');
+      if (!form) return;
+      e.preventDefault();
+      const fd = new FormData(form);
+      if (!fd.get('brand')) fd.set('brand','qivodigital');
+      if (!fd.get('source_page')) fd.set('source_page', location.pathname);
+      const params = new URLSearchParams(location.search);
+      ['utm_source','utm_medium','utm_campaign'].forEach(k=>{ if(params.get(k) && !fd.get(k)) fd.set(k, params.get(k)); });
+      try{
+        const res = await fetch('/api/leads.php',{method:'POST',body:fd});
+        const j = await res.json();
+        if(j.ok){ form.reset(); alert('✅ Recibimos tu solicitud. Te contactaremos en &lt; 24 h.'); }
+        else{ alert('❌ No pudimos registrar tu solicitud. Intenta nuevamente.'); }
+      }catch(err){ alert('⚠️ Error de red. Verifica tu conexión e intenta otra vez.'); }
+    });
+  </script>
+</body>
+</html>

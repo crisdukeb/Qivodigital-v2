@@ -1,0 +1,17 @@
+# robots.txt — QivoDigital
+# Última actualización: 2025-11-03
+
+User-agent: *
+Allow: /
+# Bloqueos razonables (no afectan páginas públicas)
+Disallow: /admin/
+Disallow: /api/private/
+Disallow: /tmp/
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /*.map$
+
+# Nota: Google ignora crawl-delay; Bing y otros sí lo usan.
+Crawl-delay: 2
+
+Sitemap: https://qivodigital.com/sitemap.xml

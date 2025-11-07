@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>🔗 Integraciones & APIs | QivoDigital</title>
+<meta name="description" content="Conectamos tus sistemas: ERP, CRM, pagos, logística, comercio electrónico y BI. APIs, webhooks, sincronizaciones de datos, colas y monitoreo 24/7."/>
+<link rel="canonical" href="https://qivodigital.com/servicios/integraciones/"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<style>
+  .actions.center{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .badges{display:flex;gap:10px;flex-wrap:wrap}
+  .qv-stack{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .qv-card .cta{display:inline-block;margin-top:6px;font-weight:600}
+  .qv-card .cta i{font-style:normal}
+</style>
+</head><body>
+
+<!-- HEADER -->
+<div id="header-placeholder"></div>
+<script>
+fetch("/components/header.html")
+  .then(r=>r.text())
+  .then(h=>document.getElementById("header-placeholder").innerHTML=h);
+</script>
+
+<!-- HERO -->
+<section class="hero container" id="hero" style="padding-top:92px">
+  <div class="grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>Integraciones & APIs</p>
+      <h1>Todo conectado. Todo sincronizado. ⚡</h1>
+      <p class="lead">Conectamos tus sistemas para que los datos fluyan sin fricciones. Menos Excel, menos errores, más trazabilidad y operación estable 💪.</p>
+      <div class="actions center">
+        <a href="#form-integraciones" class="btn btn-primary">Agenda consultoría</a>
+        <a href="#casos" class="btn btn-ghost">Casos típicos</a>
+      </div>
+      <div class="badges" style="margin-top:12px">
+        <span class="badge">APIs REST/GraphQL</span><span class="badge">Webhooks</span>
+        <span class="badge">ETL/ELT</span><span class="badge">Colas & Retries</span><span class="badge">Observabilidad</span>
+      </div>
+    </div>
+    <div class="hero-card"><p>Integraciones QivoDigital — vista previa</p></div>
+  </div>
+</section>
+
+<!-- CASOS -->
+<section class="container" id="casos" style="margin-top:32px">
+  <h2>Casos reales que resolvemos</h2>
+  <div class="qv-stack">
+    <article class="qv-card">
+      <h3>🔗 ERP/CRM</h3>
+      <p>Clientes, pedidos, facturas, stock y precios. Minimiza tiempos y errores en flujo comercial.</p>
+      <span class="cta">Capas de datos <i>→</i></span>
+    </article>
+    <article class="qv-card">
+      <h3>💳 Pagos & conciliación</h3>
+      <p>Enlaces, antifraude, conciliación automática y suscripciones.</p>
+      <span class="cta">Checkout & Billing <i>→</i></span>
+    </article>
+    <article class="qv-card">
+      <h3>📦 Logística</h3>
+      <p>Generación de guías, tracking, SLA y tarifas dinámicas.</p>
+      <span class="cta">Carrier Hub <i>→</i></span>
+    </article>
+    <article class="qv-card">
+      <h3>🛒 Ecommerce</h3>
+      <p>Catálogo, pedidos y stock en tiempo real entre tiendas y sistemas core.</p>
+      <span class="cta">Headless commerce <i>→</i></span>
+    </article>
+    <article class="qv-card">
+      <h3>📊 BI & Data</h3>
+      <p>ETL/ELT hacia Data Warehouse, dashboards y alertas.</p>
+      <span class="cta">Insights <i>→</i></span>
+    </article>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="container" id="beneficios" style="margin-top:28px">
+  <h2>Beneficios técnicos y operativos</h2>
+  <ul class="qv-list">
+    <li>✅ Menos errores humanos y conciliaciones manuales.</li>
+    <li>📡 Trazabilidad y métricas end-to-end.</li>
+    <li>📈 Datos limpios listos para BI y decisiones.</li>
+    <li>🛡️ Seguridad en tránsito y en reposo.</li>
+    <li>⚙️ Auto-reintentos y colas para estabilidad.</li>
+    <li>📦 Sistemas operando como uno solo.</li>
+  </ul>
+</section>
+
+<!-- FORM (post a /api/leads.php como index) -->
+<section class="container" id="form-integraciones" style="margin:40px 0 60px">
+  <form class="qv-form" data-form="integraciones" method="post" action="/api/leads.php">
+    <h3>Necesito integrar mis sistemas ✅</h3>
+
+    <div class="qv-grid">
+      <label>👤 Nombre*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+      <label>🏢 Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+      <label>📧 Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+
+      <label>🧩 ¿Qué servicio te interesa?*<br>
+        <select name="interes" required>
+          <option value="">Selecciona…</option>
+          <option value="integraciones" selected>🔗 Integraciones / APIs</option>
+          <option value="whatsapp">📲 WhatsApp & Chatbots</option>
+          <option value="automatizacion">⚙️ Automatización</option>
+          <option value="ecommerce">🛒 E-commerce</option>
+          <option value="software-medida">🧩 Software a medida</option>
+          <option value="web-apps">💻 Web-Apps</option>
+          <option value="apps">📱 Apps móviles</option>
+          <option value="chatbots">🤖 Chatbots e IA</option>
+          <option value="crm">📊 CRM</option>
+          <option value="otros">➕ Otros</option>
+        </select>
+      </label>
+    </div>
+
+    <label>📦 Volumen & frecuencia (2–4 líneas)*<br>
+      <textarea required name="mensaje" rows="4" placeholder="¿Qué datos deben sincronizarse? ¿Cada cuánto? ¿Qué validaciones?"></textarea>
+    </label>
+
+    <!-- Campos ocultos esperados -->
+    <input type="hidden" name="brand" value="qivodigital"/>
+    <input type="hidden" name="source_page" value="/servicios/integraciones/"/>
+
+    <div class="actions center" style="margin-top:12px">
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </div>
+    <small>⏱️ Respuesta &lt; 24 h.</small>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>
+<script>
+fetch("/components/footer.html")
+  .then(r=>r.text())
+  .then(f=>document.getElementById("footer-placeholder").innerHTML=f);
+</script>
+
+<!-- JS envío leads (usa action del form + UTM) -->
+<script>
+document.addEventListener('submit', async (e) => {
+  const form = e.target.closest('form.qv-form');
+  if (!form) return;
+  e.preventDefault();
+
+  const fd = new FormData(form);
+  if (!fd.get('brand')) fd.set('brand','qivodigital');
+  if (!fd.get('source_page')) fd.set('source_page', location.pathname);
+
+  const params = new URLSearchParams(location.search);
+  ['utm_source','utm_medium','utm_campaign'].forEach(k=>{
+    if (params.get(k) && !fd.get(k)) fd.set(k, params.get(k));
+  });
+
+  try {
+    const url = form.getAttribute('action') || '/api/leads.php';
+    const res = await fetch(url, { method:'POST', body: fd });
+    const json = await res.json();
+    if (json.ok) {
+      form.reset();
+      alert('✅ ¡Listo! Te contactaremos pronto.');
+    } else {
+      alert('❌ No pudimos registrar tu solicitud. Intenta nuevamente.');
+    }
+  } catch (err) {
+    alert('⚠️ Error de red. Intenta otra vez.');
+  }
+});
+</script>
+
+<script src="/assets/js/main.js"></script>
+</body></html>

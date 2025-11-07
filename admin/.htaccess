@@ -1,0 +1,48 @@
+# ===========================================
+# QivoDigital — .htaccess para ADMIN (seguridad)
+# Ubicación: /public_html/admin/.htaccess
+# ===========================================
+
+# Desactivar listado de archivos
+Options -Indexes
+
+# PHP seguro para admin
+<IfModule mod_php.c>
+  php_flag display_errors Off
+  php_value session.cookie_httponly On
+  php_value session.use_strict_mode On
+</IfModule>
+
+# Seguridad de headers
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# No permitir cacheo del panel
+<FilesMatch "\.(html|php)$">
+  FileETag None
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+    Header unset ETag
+  </IfModule>
+</FilesMatch>
+
+# Bloquear acceso directo a carpetas internas sensibles
+<FilesMatch "(?:^\.|config\.php|.*\.db|composer\.(json|lock)|\.env)">
+  Require all denied
+</FilesMatch>
+
+# Impedir hotlink de recursos dentro de admin
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/admin/login\.php$
+RewriteCond %{REQUEST_URI} !^/admin/.*\.(css|js|png|jpg|jpeg|gif|svg)$
+RewriteCond %{REQUEST_URI} \.(php|html)$
+RewriteRule .* - [L]
+
+# Página 403 amigable
+ErrorDocument 403 "Acceso Denegado."

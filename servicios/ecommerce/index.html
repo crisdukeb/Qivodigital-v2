@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Tiendas Online & E-commerce que convierten | QivoDigital</title>
+  <meta name="description" content="E-commerce rápidos, seguros y optimizados: catálogo, pagos, envíos, marketing y analítica. Integración total con tus sistemas para vender más con menos fricción."/>
+  <link rel="canonical" href="https://qivodigital.com/servicios/ecommerce/"/>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+  <style>
+    .actions.center{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .qv-stack{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .qv-chipbar{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+    .qv-card .cta{display:inline-block;margin-top:6px;font-weight:600}
+    .qv-card .cta i{font-style:normal}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("/components/header.html").then(r=>r.text()).then(h=>document.getElementById("header-placeholder").innerHTML=h);
+  </script>
+
+  <!-- HERO -->
+  <section class="hero container" id="hero" style="padding-top:92px">
+    <div class="grid">
+      <div>
+        <p class="kicker"><span class="dot"></span>E-commerce de alto rendimiento</p>
+        <h1>Tu tienda lista para vender hoy, escalar mañana.</h1>
+        <p class="lead">Velocidad ⚡ · SEO técnico 🚀 · UX que convierte 🛍️ · Automatización 🤖. Conecta catálogo, pagos, logística y marketing.</p>
+        <div class="actions center">
+          <a href="#form-ecommerce" class="btn btn-primary">🚀 Solicitar diagnóstico</a>
+          <a href="#features" class="btn btn-ghost">👀 Ver características</a>
+        </div>
+        <div class="badges" style="margin-top:12px">
+          <span class="badge">Checkout optimizado</span>
+          <span class="badge">Logística integrada</span>
+          <span class="badge">SEO & Core Web Vitals</span>
+          <span class="badge">Analytics & métricas</span>
+        </div>
+      </div>
+      <div class="hero-card"><p>E-commerce QivoDigital — vista previa</p></div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="container" id="features" style="margin-top:32px">
+    <h2>Capacidades clave para vender más</h2>
+    <div class="qv-stack">
+      <article class="qv-card"><h3>🛒 Catálogo inteligente</h3><p>Variaciones, stock en tiempo real, precios por ciudad, bundles/combos, reglas de descuentos y campañas.</p></article>
+      <article class="qv-card"><h3>💳 Pagos confiables</h3><p>Integraciones locales e internacionales, links de pago, suscripciones, antifraude y conciliación automática.</p></article>
+      <article class="qv-card"><h3>🚚 Logística & envíos</h3><p>Tarifas dinámicas, tiempos estimados, picking, tracking y notificaciones transaccionales.</p></article>
+      <article class="qv-card"><h3>📈 Marketing & growth</h3><p>Píxeles, tags, feeds para Ads/Shopping, email/WhatsApp automation, cupones y recuperación de carrito.</p></article>
+      <article class="qv-card"><h3>🔗 Integraciones end-to-end</h3><p>ERP/CRM, facturación, BI, marketplaces y webhooks resilientes con reintentos y trazabilidad.</p></article>
+      <article class="qv-card"><h3>🛡️ Seguridad & performance</h3><p>HTTPS, CSP, backups, hardening, CDN y Core Web Vitals de referencia.</p></article>
+    </div>
+  </section>
+
+  <!-- METODOLOGÍA -->
+  <section class="container" id="metodologia" style="margin-top:28px">
+    <h2>Cómo lo hacemos (metodología clara y medible)</h2>
+    <div class="qv-chipbar">
+      <div class="qv-card"><h3>1) Descubrimiento & KPIs</h3><p>Objetivos, conversión, logística, medios y operación.</p></div>
+      <div class="qv-card"><h3>2) Arquitectura & POC</h3><p>Stack, riesgos, integraciones y prototipo funcional.</p></div>
+      <div class="qv-card"><h3>3) Construcción ágil</h3><p>Sprints con CI/CD, QA, accesibilidad y SEO técnico.</p></div>
+      <div class="qv-card"><h3>4) Integraciones</h3><p>Pagos, envíos, ERP/CRM, BI y automatizaciones de marketing.</p></div>
+      <div class="qv-card"><h3>5) Go-live & optimización</h3><p>Dashboards, alertas y mejoras continuas por datos.</p></div>
+    </div>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section class="container" id="beneficios" style="margin-top:32px">
+    <h2>Resultados que buscamos en cada proyecto</h2>
+    <ul class="qv-list">
+      <li>📈 ↑ Conversión y ticket promedio, ↓ abandono de carrito.</li>
+      <li>⚙️ Operación conectada: catálogo, pagos, logística y servicio.</li>
+      <li>📊 Decisiones por datos: dashboards vivos y alertas accionables.</li>
+      <li>💸 Ahorro por automatización y reducción de retrabajos.</li>
+      <li>🛡️ Seguridad, cumplimiento y continuidad operativa.</li>
+      <li>🚀 Escalabilidad y mantenibilidad listas para crecer.</li>
+    </ul>
+  </section>
+
+  <!-- FORMULARIO (POST a /api/leads.php, igual a index) -->
+  <section class="container" id="form-ecommerce" style="margin:40px 0 60px">
+    <form class="qv-form" data-form="ecommerce" method="post" action="/api/leads.php">
+      <h3>Quiero mi e-commerce listo para convertir</h3>
+      <div class="qv-grid">
+        <label>👤 Nombre completo*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+        <label>🏬 Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+        <label>📧 Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+        <label>🎯 Interés*<br>
+          <select name="interes" required>
+            <option value="">Selecciona…</option>
+            <option value="ecommerce" selected>🛒 E-commerce</option>
+            <option value="whatsapp">📲 WhatsApp & Chatbots</option>
+            <option value="automatizacion">⚙️ Automatización</option>
+            <option value="software-medida">🧩 Software a medida</option>
+            <option value="integraciones">🔗 Integraciones</option>
+            <option value="web-apps">💻 Web-Apps</option>
+            <option value="apps">📱 Apps móviles</option>
+            <option value="chatbots">🤖 Chatbots e IA</option>
+            <option value="crm">📊 CRM</option>
+            <option value="otros">➕ Otros</option>
+          </select>
+        </label>
+      </div>
+      <label>📝 Objetivo principal (2–4 líneas)*<br>
+        <textarea required name="mensaje" rows="4" placeholder="¿Qué debe lograr tu tienda? Catálogo, pagos, envíos, integraciones, performance, etc."></textarea>
+      </label>
+
+      <!-- Campos ocultos esperados por leads.php -->
+      <input type="hidden" name="brand" value="qivodigital"/>
+      <input type="hidden" name="source_page" value="/servicios/ecommerce/"/>
+
+      <div class="actions" style="margin-top:8px">
+        <button class="btn btn-primary" type="submit">🚀 Enviar solicitud</button>
+      </div>
+      <small>⏱️ Respuesta en menos de 24 h.</small>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("/components/footer.html").then(r=>r.text()).then(f=>document.getElementById("footer-placeholder").innerHTML=f);
+  </script>
+
+  <!-- ENVÍO DEL FORMULARIO (usa action del form + UTM) -->
+  <script>
+    document.addEventListener('submit', async (e) => {
+      const form = e.target.closest('form.qv-form');
+      if (!form) return;
+      e.preventDefault();
+
+      const fd = new FormData(form);
+      if (!fd.get('brand')) fd.set('brand','qivodigital');
+      if (!fd.get('source_page')) fd.set('source_page', location.pathname);
+
+      const params = new URLSearchParams(location.search);
+      ['utm_source','utm_medium','utm_campaign'].forEach(k=>{
+        if (params.get(k) && !fd.get(k)) fd.set(k, params.get(k));
+      });
+
+      try {
+        const res = await fetch(form.getAttribute('action') || '/api/leads.php', { method:'POST', body: fd });
+        const json = await res.json();
+        if (json.ok) {
+          form.reset();
+          alert('✅ Recibimos tu solicitud. Te contactaremos en menos de 24 h.');
+        } else {
+          alert('❌ No pudimos registrar tu solicitud. Intenta nuevamente.');
+        }
+      } catch (err) {
+        alert('⚠️ Error de red. Verifica tu conexión e intenta otra vez.');
+      }
+    });
+  </script>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

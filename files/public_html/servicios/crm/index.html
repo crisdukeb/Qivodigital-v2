@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CRM a Medida & Pipelines | QivoDigital</title>
+<meta name="description" content="Diseñamos CRMs que se adaptan a tu proceso: pipelines, roles, automatizaciones, reportes y vistas por equipo. Integraciones con WhatsApp, pagos y BI."/>
+<link rel="canonical" href="https://qivodigital.com/servicios/crm/"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<style>
+  .actions.center{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .badges{display:flex;gap:10px;flex-wrap:wrap}
+  .qv-stack,.qv-chipbar{display:grid;gap:12px}
+  .qv-stack{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .qv-chipbar{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .qv-card .cta{display:inline-block;margin-top:6px;font-weight:600}
+  .qv-card .cta i{font-style:normal}
+</style>
+</head><body>
+
+<!-- HEADER -->
+<div id="header-placeholder"></div>
+<script>fetch("/components/header.html").then(r=>r.text()).then(h=>document.getElementById("header-placeholder").innerHTML=h);</script>
+
+<!-- HERO -->
+<section class="hero container" id="hero" style="padding-top:92px">
+  <div class="grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>CRM a Medida</p>
+      <h1>Visibilidad real del pipeline. <br/>Cierre con método.</h1>
+      <p class="lead">Pipelines Kanban, automatizaciones, roles/permiso, dashboards y reportes. Tu proceso —no el de un software genérico— con integración a WhatsApp, pagos y BI.</p>
+      <div class="actions">
+        <a href="#brief" class="btn btn-primary">Agenda tu consultoría</a>
+        <a href="#modulos" class="btn btn-ghost">Ver módulos</a>
+      </div>
+      <div class="badges">
+        <span class="badge">🎯 Pipelines</span><span class="badge">🧩 Integraciones</span>
+        <span class="badge">🤖 Automatización</span><span class="badge">📊 KPIs</span>
+      </div>
+    </div>
+    <div class="hero-card"><p>CRM QivoDigital — vista previa</p></div>
+  </div>
+</section>
+
+<!-- MÓDULOS -->
+<section class="container" id="modulos" style="margin-top:32px">
+  <h2>Módulos clave</h2>
+  <div class="qv-stack">
+    <article class="qv-card">
+      <h3>🎯 Pipeline & Actividades</h3>
+      <p>Etapas configurables, scoring, tareas, recordatorios y SLA. Vista por ejecutivo, equipo y gerencia.</p>
+      <span class="cta">Gestión de oportunidades <i>→</i></span>
+    </article>
+    <article class="qv-card">
+      <h3>🤖 Automatizaciones</h3>
+      <p>Asignación automática, secuencias, notificaciones y cambios de estado por reglas y eventos.</p>
+      <span class="cta">Flujos inteligentes <i>→</i></span>
+    </article>
+    <article class="qv-card">
+      <h3>🧩 Integraciones</h3>
+      <p>WhatsApp/QivoSend, correo, pagos, facturación, formularios web y webhooks resilientes.</p>
+      <span class="cta">Conecta tu stack <i>→</i></span>
+    </article>
+    <article class="qv-card">
+      <h3>📊 Dashboards & Reportes</h3>
+      <p>Conversión por etapa, tiempo de ciclo, forecast, productividad y revenue atribuido.</p>
+      <span class="cta">KPIs accionables <i>→</i></span>
+    </article>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="container" id="beneficios" style="margin-top:28px">
+  <h2>Resultados que entregamos</h2>
+  <ul class="qv-list">
+    <li>📈 ↑ conversión y ticket promedio con seguimiento oportuno.</li>
+    <li>⏱️ ↓ tiempos de ciclo y mejor control de SLA.</li>
+    <li>🔐 Seguridad por roles, auditoría y permisos por área.</li>
+    <li>🧠 Decisiones por datos: dashboards vivos y alertas.</li>
+    <li>🚀 Escalable y mantenible para crecer sin rehacer.</li>
+  </ul>
+</section>
+
+<!-- PROCESO -->
+<section class="container" id="proceso" style="margin-top:28px">
+  <h2>Proceso QivoDigital</h2>
+  <div class="qv-chipbar">
+    <div class="qv-card"><h3>1) Descubrimiento</h3><p>Levantamos proceso, KPIs y dolores reales.</p></div>
+    <div class="qv-card"><h3>2) Arquitectura</h3><p>Modelo de datos, seguridad y flujos.</p></div>
+    <div class="qv-card"><h3>3) Implementación</h3><p>Campos, vistas, automatizaciones e integraciones.</p></div>
+    <div class="qv-card"><h3>4) Go-live</h3><p>Capacitación, monitoreo y soporte.</p></div>
+    <div class="qv-card"><h3>5) Optimización</h3><p>Iteramos por datos: etapas, reglas y reportes.</p></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="container" id="faq" style="margin-top:28px">
+  <h2>Preguntas frecuentes</h2>
+  <div class="qv-stack">
+    <details class="qv-card"><summary>¿Migran datos desde mi CRM actual?</summary><p>Sí. Importamos leads, oportunidades, contactos y actividades conservando historial cuando es posible.</p></details>
+    <details class="qv-card"><summary>¿Puedo empezar simple y crecer?</summary><p>Totalmente. Diseñamos por fases con entregables incrementales.</p></details>
+    <details class="qv-card"><summary>¿Cómo medimos el éxito?</summary><p>KPIs definidos al inicio: conversión, tiempos, forecast y metas por equipo.</p></details>
+  </div>
+</section>
+
+<!-- FORMULARIO (conectado a /leads.php) -->
+<section class="container" id="brief" style="margin:40px 0 60px">
+  <form class="qv-form" data-form="crm">
+    <h3>Tu CRM ideal</h3>
+    <div class="qv-grid">
+      <label>Nombre completo*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+      <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+      <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+      <label>¿Qué servicio te interesa?*<br>
+        <!-- valores PERMITIDOS por leads.php -->
+        <select name="interes" required>
+          <option value="" selected>Selecciona…</option>
+          <option value="crm">CRM</option>
+          <option value="whatsapp">WhatsApp & Chatbots</option>
+          <option value="automatizacion">Automatización</option>
+          <option value="ecommerce">E-commerce</option>
+          <option value="software-medida">Software a medida</option>
+          <option value="integraciones">Integraciones</option>
+          <option value="web-apps">Web-Apps</option>
+          <option value="apps">Apps móviles</option>
+          <option value="chatbots">Chatbots e IA</option>
+          <option value="otros">Otros</option>
+        </select>
+      </label>
+    </div>
+    <label>Etapas del pipeline (separadas por →)*<br>
+      <input required name="etapas" placeholder="Prospección → Calificado → Propuesta → Negociación → Cierre"/>
+    </label>
+    <label>Qué debe resolver (2–3 líneas)*<br>
+      <textarea required name="mensaje" rows="4" placeholder="Dolores actuales, integraciones necesarias y métricas objetivo"></textarea>
+    </label>
+    <!-- Campos ocultos esperados -->
+    <input type="hidden" name="brand" value="qivodigital"/>
+    <input type="hidden" name="source_page" value="/servicios/crm/"/>
+    <div class="actions" style="margin-top:8px">
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </div>
+    <small>Tiempo de respuesta: &lt; 24 h.</small>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>
+<script>fetch("/components/footer.html").then(r=>r.text()).then(h=>document.getElementById("footer-placeholder").innerHTML=h);</script>
+
+<!-- JS: envío a /leads.php con UTM -->
+<script>
+document.addEventListener('submit', async (e) => {
+  const form = e.target.closest('form.qv-form');
+  if (!form) return;
+  e.preventDefault();
+
+  const fd = new FormData(form);
+  if (!fd.get('brand')) fd.set('brand','qivodigital');
+  if (!fd.get('source_page')) fd.set('source_page', location.pathname);
+
+  const params = new URLSearchParams(location.search);
+  ['utm_source','utm_medium','utm_campaign'].forEach(k=>{
+    if (params.get(k) && !fd.get(k)) fd.set(k, params.get(k));
+  });
+
+  try {
+    const res = await fetch('/leads.php', { method:'POST', body: fd });
+    const json = await res.json();
+    if (json.ok) {
+      form.reset();
+      alert('✅ Recibimos tu solicitud. Te contactaremos en menos de 24 h.');
+    } else {
+      alert('❌ No pudimos registrar tu solicitud. Intenta nuevamente.');
+    }
+  } catch (err) {
+    alert('⚠️ Error de red. Verifica tu conexión e intenta otra vez.');
+  }
+});
+</script>
+
+<script src="/assets/js/main.js"></script>
+</body></html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WhatsApp Marketing & API Oficial | QivoDigital</title>
+<meta name="description" content="Implementamos WhatsApp con métricas, chatbots e integración a tus sistemas. Envíos masivos, plantillas, métricas y automatización con IA."/>
+<link rel="canonical" href="https://qivodigital.com/servicios/whatsapp/"/>
+<link rel="stylesheet" href="/assets/css/style.css"/></head><body>
+
+<div id="header-placeholder"></div>
+<script>fetch("/components/header.html").then(r=>r.text()).then(h=>document.getElementById("header-placeholder").innerHTML=h);</script>
+
+<section class="hero container" id="hero" style="padding-top:92px">
+  <div class="grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>WhatsApp + IA</p>
+      <h1>Conversaciones que venden. Operación que escala.</h1>
+      <p class="lead">Integración oficial, envíos, bots, plantillas & analytics para convertir más y atender mejor.</p>
+      <div class="actions">
+        <a href="#brief" class="btn btn-primary">Agenda tu consultoría</a>
+        <a href="#modulos" class="btn btn-ghost">Módulos</a>
+      </div>
+      <div class="badges">
+        <span class="badge">API Oficial</span><span class="badge">Chatbots</span>
+        <span class="badge">Métricas</span><span class="badge">CRM</span>
+      </div>
+    </div>
+    <div class="hero-card"><p>WhatsApp + QivoSend</p></div>
+  </div>
+</section>
+
+<section class="container" id="modulos" style="margin-top:32px">
+  <h2>Módulos</h2>
+  <div class="qv-stack">
+    <article class="qv-card"><h3>📨 Envíos y campañas</h3><p>Segmentación, plantillas, A/B y seguimiento.</p></article>
+    <article class="qv-card"><h3>🤖 Chatbots</h3><p>Soporte, ventas y postventa con IA.</p></article>
+    <article class="qv-card"><h3>🔗 Integraciones</h3><p>ERP/CRM, pagos, webhooks, data layer.</p></article>
+    <article class="qv-card"><h3>📊 Analytics</h3><p>Conversiones, respuestas, tiempos y calidad.</p></article>
+  </div>
+</section>
+
+<section class="container" id="brief" style="margin-top:24px">
+  <form class="qv-form" data-form="whatsapp">
+    <h3>Cuéntanos tu caso</h3>
+    <div class="qv-grid">
+      <label>Nombre*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+      <label>Empresa*<br><input required name="empresa" placeholder="Nombre de tu empresa"/></label>
+      <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+      <label>Uso principal*<br>
+        <label for="interes">¿Qué servicio te interesa?*</label>
+<select name="interes" id="interes" required>
+  <option value="" selected>Selecciona…</option>
+  <option value="whatsapp">WhatsApp & Chatbots</option>
+  <option value="automatizacion">Automatización de procesos</option>
+  <option value="ecommerce">E-commerce</option>
+  <option value="software-medida">Software a medida</option>
+  <option value="integraciones">Integraciones</option>
+  <option value="web-apps">Web-Apps</option>
+  <option value="apps">Apps móviles</option>
+  <option value="crm">CRM</option>
+  <option value="webs">Webs</option>
+  <option value="otros">Otros</option>
+</select>
+      </label>
+    </div>
+    <label>Objetivo (2–3 líneas)*<br>
+      <textarea required name="mensaje" rows="4" placeholder="Qué esperas lograr con WhatsApp + IA"></textarea>
+    </label>
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </form>
+</section>
+
+<div id="footer-placeholder"></div>
+<script>fetch("/components/footer.html").then(r=>r.text()).then(h=>document.getElementById("footer-placeholder").innerHTML=h);</script>
+<script src="/assets/js/main.js"></script>
+</body></html>

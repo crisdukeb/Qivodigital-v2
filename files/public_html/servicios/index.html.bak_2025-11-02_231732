@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QivoDigital — Servicios</title>
+  <meta name="description" content="Servicios QivoDigital: automatización, ecommerce, integraciones, web/apps, apps móviles, chatbots/IA y CRM. Implementamos tecnología que impulsa resultados reales.">
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+  <link rel="canonical" href="/servicios/"/>
+  <style>
+    /* micro-ajustes sin romper tu CSS */
+    .qv-center{ text-align:center }
+    .qv-hero-gradient .gtext{
+      background: linear-gradient(90deg,#e6f0ff 0%,#b3b8ff 45%,#60a5fa 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent
+    }
+    .qv-hero-gradient .sub{ opacity:.92 }
+    .actions.center{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap }
+    .qv-chipbar{ display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)) }
+    .qv-card .cta{ display:block; margin-top:8px; font-weight:600 }
+    .qv-card .cta i{ font-style:normal }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <div id="qv-header-placeholder"></div>
+
+  <main class="container" style="margin-top:100px">
+
+    <!-- HERO con degradado y botones centrados -->
+    <section id="hero-servicios" class="container qv-hero-gradient">
+      <h1 class="gtext">Servicios QivoDigital</h1>
+      <p class="lead sub">Tecnología que <b>resuelve cuellos de botella</b>, escala operaciones y convierte datos en decisiones. 💡⚙️</p>
+      <div class="actions center" style="margin-top:14px">
+        <a href="#form-servicios" class="btn btn-primary">Agenda diagnóstico</a>
+      </div>
+      <div class="badges" style="margin-top:12px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap">
+        <span class="badge">Seguridad & monitoreo 24/7</span>
+        <span class="badge">Integraciones end-to-end</span>
+      </div>
+    </section>
+
+    <!-- Metodología con título -->
+    <section id="metodologia" class="container" style="margin-top:28px">
+      <h2>Metodología clara y medible</h2>
+      <div class="qv-chipbar">
+        <div class="qv-card">
+          <h3>1) Descubrimiento & KPIs</h3>
+          <p>Levantamos operación, datos y objetivos. Definimos alcance y KPIs accionables.</p>
+        </div>
+        <div class="qv-card">
+          <h3>2) Arquitectura & POC</h3>
+          <p>Propuesta técnica, gestión de riesgos y prototipo funcional para validar rápido.</p>
+        </div>
+        <div class="qv-card">
+          <h3>3) Construcción ágil</h3>
+          <p>Entregables quincenales, CI/CD, QA continuo y seguridad aplicada.</p>
+        </div>
+        <div class="qv-card">
+          <h3>4) Integraciones</h3>
+          <p>Pagos, logística, mensajería, BI. Resiliencia y monitoreo 24/7.</p>
+        </div>
+        <div class="qv-card">
+          <h3>5) Go-live & Métricas</h3>
+          <p>Dashboards, alertas y optimización continua basada en datos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo de servicios con CTA por tarjeta -->
+    <section id="catalogo-servicios" class="container" style="margin-top:32px">
+      <h2>Qué hacemos (y cómo te impacta)</h2>
+
+      <div class="grid" style="margin-top:18px">
+        <a class="qv-card" href="/servicios/whatsapp/">
+          <h3>📲 WhatsApp Marketing / API</h3>
+          <p>Campañas, chatbots, flujos y métricas. Integra CRM, pagos y paneles. Más cierre con menor tiempo de respuesta.</p>
+          <span class="cta">Ver servicio <i>→</i></span>
+        </a>
+
+        <a class="qv-card" href="/servicios/automatizacion/">
+          <h3>⚙️ Automatización</h3>
+          <p>Orquestamos procesos entre sistemas, eliminamos tareas repetitivas y activamos reportes automáticos.</p>
+          <span class="cta">Ver servicio <i>→</i></span>
+        </a>
+
+        <a class="qv-card" href="/servicios/ecommerce/">
+          <h3>🛒 Ecommerce</h3>
+          <p>Tiendas rápidas con checkout optimizado, logística y catálogos conectados. SEO técnico y performance.</p>
+          <span class="cta">Ver servicio <i>→</i></span>
+        </a>
+
+        <a class="qv-card" href="/servicios/software-medida/">
+          <h3>🧩 Software a Medida</h3>
+          <p>Sistemas exactos a tu operación: roles, permisos, flujos complejos, facturación y auditoría.</p>
+          <span class="cta">Ver servicio <i>→</i></span>
+        </a>
+
+        <a class="qv-card" href="/servicios/integraciones/">
+          <h3>🔗 Integraciones / APIs</h3>
+          <p>Conectamos tu stack (pagos, logística, ERPs, BI). Webhooks, colas y tolerancia a fallos.</p>
+          <span class="cta">Ver servicio <i>→</i></span>
+        </a>
+
+        <a class="qv-card" href="/servicios/web-apps/">
+          <h3>💻 Web & Web-Apps</h3>
+          <p>Webs corporativas, paneles internos y PWAs. Velocidad, accesibilidad y SEO como estándar.</p>
+          <span class="cta">Ver servicio <i>→</i></span>
+        </a>
+
+        <a class="qv-card" href="/servicios/apps/">
+          <h3>📱 Apps</h3>
+          <p>Nativas o híbridas con push, cámara, geolocalización y analítica alineadas al negocio.</p>
+          <span class="cta">Ver servicio <i>→</i></span>
+        </a>
+
+        <a class="qv-card" href="/servicios/chatbots/">
+          <h3>🤖 Chatbots e IA</h3>
+          <p>Asistentes, RAG y automatización de tickets. Reduce tiempos y mejora CSAT.</p>
+          <span class="cta">Ver servicio <i>→</i></span>
+        </a>
+
+        <a class="qv-card" href="/servicios/crm/">
+          <h3>📊 CRM a Medida</h3>
+          <p>Pipelines, scoring, tareas automáticas y vistas por equipo. Integrado con WhatsApp y facturación.</p>
+          <span class="cta">Ver servicio <i>→</i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Resultados (ampliado) -->
+    <section id="beneficios" class="container" style="margin-top:32px">
+      <h2>Resultados que buscamos en cada proyecto</h2>
+      <ul class="qv-list">
+        <li>⏱️ Menor tiempo de ciclo y SLA mejorado en procesos críticos.</li>
+        <li>📈 Más conversión de leads y ventas con trazabilidad end-to-end.</li>
+        <li>🧠 Decisiones por datos: dashboards vivos y alertas accionables.</li>
+        <li>🧹 Gobierno de datos: menos errores y mayor consistencia.</li>
+        <li>🔐 Seguridad y cumplimiento: accesos, auditoría y respaldos.</li>
+        <li>💸 Ahorro por automatización y eliminación de retrabajos.</li>
+        <li>🙂 Mejor experiencia de cliente: tiempos de respuesta y NPS.</li>
+        <li>📦 Escalabilidad y mantenibilidad listas para crecer.</li>
+        <li>⚡ Time-to-value corto con entregables incrementales.</li>
+        <li>👥 Capacitación y transferencia de conocimiento al equipo.</li>
+      </ul>
+    </section>
+
+    <!-- Stack técnico PRO -->
+    <section id="stack" class="container" style="margin-top:32px">
+      <h2>Stack técnico (nivel PRO)</h2>
+      <p>Elegimos la herramienta adecuada al caso para maximizar <b>rendimiento, seguridad y mantenibilidad</b> en web, apps y sistemas internos.</p>
+
+      <div class="grid" style="margin-top:16px">
+        <div class="qv-card">
+          <h3>🧠 Data & IA</h3>
+          <ul class="qv-list">
+            <li>RAG/embeddings, asistentes y clasificación automática.</li>
+            <li>ETL/ELT con orquestación y tareas programadas.</li>
+            <li>Dashboards en vivo, métricas accionables, alertas.</li>
+          </ul>
+        </div>
+
+        <div class="qv-card">
+          <h3>🔌 Backend & APIs</h3>
+          <ul class="qv-list">
+            <li>APIs REST/GraphQL con versionado y rate-limit.</li>
+            <li>Colas y eventos (jobs asíncronos, reintentos, DLQ).</li>
+            <li>Autenticación JWT/OAuth2, RBAC/ABAC y auditoría.</li>
+          </ul>
+        </div>
+
+        <div class="qv-card">
+          <h3>📱 Frontend & Apps</h3>
+          <ul class="qv-list">
+            <li>Web Apps y PWAs con performance y SEO técnico.</li>
+            <li>Apps móviles nativas/híbridas con push, cámara y GPS.</li>
+            <li>Design systems, accesibilidad y pruebas E2E.</li>
+          </ul>
+        </div>
+
+        <div class="qv-card">
+          <h3>⚙️ DevOps & Cloud</h3>
+          <ul class="qv-list">
+            <li>CI/CD con despliegues controlados y rollbacks.</li>
+            <li>Contenedores, auto-scaling y balanceo de carga.</li>
+            <li>Backups verificados, políticas de retención y DR.</li>
+          </ul>
+        </div>
+
+        <div class="qv-card">
+          <h3>💬 Realtime & Mensajería</h3>
+          <ul class="qv-list">
+            <li>WebSockets/SSE para tiempo real.</li>
+            <li>Integraciones WhatsApp/Email/SMS y webhooks resilientes.</li>
+            <li>Procesamiento en background con garantías de entrega.</li>
+          </ul>
+        </div>
+
+        <div class="qv-card">
+          <h3>🔐 Seguridad & Cumplimiento</h3>
+          <ul class="qv-list">
+            <li>Hardening, cifrado en tránsito y reposo, CSP/CORS.</li>
+            <li>Segregación de entornos, secretos y rotación de claves.</li>
+            <li>Monitoreo 24/7, logs firmados y respuesta a incidentes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="margin-top:12px"><small>La arquitectura exacta se define en el diagnóstico técnico según objetivos, volumen y dependencias.</small></p>
+    </section>
+
+    <!-- FAQ (6) -->
+    <section id="faq" class="container" style="margin-top:32px">
+      <h2>Preguntas frecuentes</h2>
+      <div class="qv-stack">
+        <details class="qv-card">
+          <summary>¿En cuánto tiempo entregan?</summary>
+          <p>Depende del alcance y las dependencias. Trabajamos con metodologías ágiles y herramientas líderes para procesos <b>rápidos, seguros y medibles</b>, con entregables parciales que muestran progreso continuo.</p>
+        </details>
+        <details class="qv-card">
+          <summary>¿Cómo medimos el éxito?</summary>
+          <p>KPIs desde el inicio (SLA, conversión, tiempos de ciclo, tickets). Dashboards y alertas para decisiones basadas en datos.</p>
+        </details>
+        <details class="qv-card">
+          <summary>¿Cómo es el soporte?</summary>
+          <p>Planes mensuales con monitoreo, incidencias, mejoras evolutivas y roadmap. Prioridades y ANS.</p>
+        </details>
+        <details class="qv-card">
+          <summary>¿Trabajan sobre sistemas existentes?</summary>
+          <p>Sí. Auditamos tu stack y proponemos integraciones o refactor progresivo sin detener operación.</p>
+        </details>
+        <details class="qv-card">
+          <summary>¿Quién es dueño del código y los datos?</summary>
+          <p>Tú. Entregamos repos, documentación y accesos. La infraestructura puede quedar en tus cuentas.</p>
+        </details>
+        <details class="qv-card">
+          <summary>¿Cómo gestionan seguridad y privacidad?</summary>
+          <p>Buenas prácticas: control de acceso, cifrado, auditoría, backups y segmentación de entornos.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA + FORM (conexión a leads.php) -->
+    <section id="form-servicios" class="container" style="margin:40px 0 60px">
+      <h2>¿Listo para empezar?</h2>
+      <p class="lead">Agenda un diagnóstico técnico. Te proponemos la mejor ruta para tu caso.</p>
+
+      <form class="qv-form" data-form="servicios">
+        <div class="qv-grid">
+          <label>Nombre completo*<br><input required name="nombre" placeholder="Tu nombre"/></label>
+          <label>Email*<br><input required type="email" name="email" placeholder="tucorreo@empresa.com"/></label>
+          <label>Interés*<br>
+            <select name="interes" required>
+              <option value="">Selecciona…</option>
+              <option value="whatsapp">WhatsApp & Chatbots</option>
+              <option value="automatizacion">Automatización</option>
+              <option value="ecommerce">E-commerce</option>
+              <option value="software-medida">Software a medida</option>
+              <option value="integraciones">Integraciones</option>
+              <option value="web-apps">Web & Web-Apps</option>
+              <option value="apps">Apps móviles</option>
+              <option value="chatbots">Chatbots e IA</option>
+              <option value="crm">CRM</option>
+              <option value="otros">Otros</option>
+            </select>
+          </label>
+        </div>
+        <label>¿Cuál es tu principal reto tecnológico?<br>
+          <textarea name="mensaje" rows="3" placeholder="Cuéntanos tu caso en 3–5 líneas"></textarea>
+        </label>
+        <input type="hidden" name="brand" value="qivodigital"/>
+        <input type="hidden" name="source_page" value="/servicios/"/>
+        <div class="actions" style="margin-top:8px">
+          <button class="btn btn-primary" type="submit">Solicitar diagnóstico</button>
+        </div>
+        <small>Tiempo de respuesta: &lt; 24 h.</small>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="qv-footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Header/Footer
+    fetch('/components/header.html').then(r=>r.text()).then(h=>document.getElementById('qv-header-placeholder').innerHTML=h);
+    fetch('/components/footer.html').then(r=>r.text()).then(f=>document.getElementById('qv-footer-placeholder').innerHTML=f);
+
+    // Envío de formulario al recolector de leads (mismo endpoint del Index)
+    document.addEventListener('submit', async (e) => {
+      const form = e.target.closest('form.qv-form');
+      if (!form) return;
+      e.preventDefault();
+
+      const fd = new FormData(form);
+      if (!fd.get('brand')) fd.set('brand','qivodigital');
+      if (!fd.get('source_page')) fd.set('source_page', location.pathname);
+
+      const params = new URLSearchParams(location.search);
+      ['utm_source','utm_medium','utm_campaign'].forEach(k=>{
+        if (params.get(k) && !fd.get(k)) fd.set(k, params.get(k));
+      });
+
+      const endpoint = '/api/leads.php';
+
+      try {
+        const res = await fetch(endpoint, { method:'POST', body: fd });
+        const json = await res.json();
+        if (json.ok) {
+          form.reset();
+          alert('✅ Recibimos tu solicitud. Te contactaremos en menos de 24 h.');
+        } else {
+          alert('❌ No pudimos registrar tu solicitud. Intenta nuevamente.');
+        }
+      } catch (err) {
+        alert('⚠️ Error de red. Verifica tu conexión e intenta otra vez.');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+[03-Nov-2025 01:58:11 America/Bogota] PHP Warning:  session_name(): Session name cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 28
+[03-Nov-2025 01:58:11 America/Bogota] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 29
+[03-Nov-2025 01:58:12 America/Bogota] PHP Warning:  session_name(): Session name cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 28
+[03-Nov-2025 01:58:12 America/Bogota] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 29
+[03-Nov-2025 01:58:20 America/Bogota] PHP Warning:  session_name(): Session name cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 28
+[03-Nov-2025 01:58:20 America/Bogota] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 29
+[03-Nov-2025 01:58:20 America/Bogota] [login.php] intento fallido user=qivo
+[03-Nov-2025 01:58:46 America/Bogota] PHP Warning:  session_name(): Session name cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 28
+[03-Nov-2025 01:58:46 America/Bogota] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 29
+[03-Nov-2025 01:58:46 America/Bogota] [login.php] intento fallido user=qivo
+[03-Nov-2025 02:02:43 America/Bogota] PHP Warning:  session_name(): Session name cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 28
+[03-Nov-2025 02:02:43 America/Bogota] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 29
+[03-Nov-2025 02:02:43 America/Bogota] [login.php] intento fallido user=qivo
+[03-Nov-2025 02:02:59 America/Bogota] PHP Warning:  session_name(): Session name cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 28
+[03-Nov-2025 02:02:59 America/Bogota] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 29
+[03-Nov-2025 02:03:55 America/Bogota] PHP Warning:  session_name(): Session name cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 28
+[03-Nov-2025 02:03:55 America/Bogota] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 29
+[03-Nov-2025 02:03:55 America/Bogota] [login.php] intento fallido user=qivo
+[03-Nov-2025 02:04:25 America/Bogota] PHP Warning:  session_name(): Session name cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 28
+[03-Nov-2025 02:04:25 America/Bogota] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 29
+[03-Nov-2025 02:04:25 America/Bogota] [login.php] intento fallido user=qivo
+[03-Nov-2025 02:04:33 America/Bogota] PHP Warning:  session_name(): Session name cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 28
+[03-Nov-2025 02:04:33 America/Bogota] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in /home/u448207704/domains/qivodigital.com/public_html/admin/login.php on line 29
+[03-Nov-2025 02:04:33 America/Bogota] [login.php] intento fallido user=qivo
